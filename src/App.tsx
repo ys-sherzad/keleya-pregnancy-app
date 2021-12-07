@@ -25,15 +25,19 @@ const App = () => {
     <SafeAreaView style={{ flex: 1 }}>
       <StatusBar barStyle='dark-content' />
       <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center', }}>
-        <Text testID='HELLO-KELEYA'>
+        <Text testID='hello_keleya'>
           Hello Keleya
         </Text>
 
-        <TouchableOpacity onPress={onPress} style={{ borderWidth: 1, marginTop: 20, padding: 20 }}>
+        <TouchableOpacity
+          testID='press_me'
+          onPress={onPress}
+          style={{ borderWidth: 1, marginTop: 20, padding: 20 }}
+        >
           <Text>Press me</Text>
         </TouchableOpacity>
 
-        {show && <Text testID='WOO'>Woo</Text>}
+        {show && <Text testID='woo'>Woo</Text>}
       </View>
     </SafeAreaView>
   );
