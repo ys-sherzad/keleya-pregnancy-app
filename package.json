@@ -11,8 +11,8 @@
     "test": "jest",
     "lint": "eslint .",
     "detox:build-ios": "detox build -c ios",
-    "detox:build-android": "detox build -c android",
     "detox:test-ios": "detox test -c ios",
+    "detox:build-android": "detox build -c android",
     "detox:test-android": "detox test -c android"
   },
   "dependencies": {
