@@ -1,4 +1,6 @@
-describe('Example', () => {
+import { takeScreenshot } from './helpers';
+
+describe('Home Screen', () => {
   beforeAll(async () => {
     await device.launchApp();
   });
@@ -7,12 +9,17 @@ describe('Example', () => {
     await device.reloadReactNative();
   });
 
-  it('should render text Hello Keleya', async () => {
+  afterEach(async () => {
+    takeScreenshot();
+  });
+
+  it('should show Hello Keleya text', async () => {
     await expect(element(by.id('hello_keleya'))).toBeVisible();
   });
 
-  it('should show Woo after tapping Press me', async () => {
+  it('should show a woo after tap on button', async () => {
     await element(by.id('press_me')).tap();
     await expect(element(by.id('woo'))).toBeVisible();
   });
+
 });
