@@ -21,6 +21,9 @@ const Router = (props: RouterProps) => {
     return (
         <Stack.Navigator
             initialRouteName='InitialScreen'
+            screenOptions={{
+                headerShown: false,
+            }}
         >
             <Stack.Screen name={Screen.InitialScreen} component={InitialScreen} />
             <Stack.Screen name={Screen.SignUpScreen} component={() => <View />} />
