@@ -6,11 +6,13 @@ interface ButtonProps {
     onPress: () => void;
     title: string;
     primary?: boolean;
+    testID?: string;
 }
 
 const Button = ({
     onPress,
     title,
+    testID,
     primary = false,
 }: ButtonProps) => {
 
@@ -19,6 +21,7 @@ const Button = ({
 
     return (
         <TouchableOpacity
+            {...{ testID }}
             {...{ onPress }}
             style={[styles.btn, buttonStyle]}>
             <Text style={[styles.title, titleStyle]}>{title}</Text>

@@ -38,15 +38,19 @@ const InitialScreen = (props: InitialScreenProps) => {
                     <View key={index.toString()}>
                         <View style={styles.topSectionContainer}>
                             <Image
+                                testID='keleya_logo'
                                 source={page.logo}
                                 style={styles.logo}
                             />
                             <Space size={10} />
-                            <Text style={styles.description}>
+                            <Text
+                                testID='description'
+                                style={styles.description}>
                                 {page.description}
                             </Text>
                         </View>
                         <Image
+                            testID='background_image'
                             source={page.backgroundImage}
                             style={styles.image}
                         />
@@ -56,19 +60,23 @@ const InitialScreen = (props: InitialScreenProps) => {
 
             <View style={styles.bottomSectionContainer}>
                 <Button
+                    testID='get_started'
                     onPress={() => { }}
                     title='Get Started'
                     primary
                 />
                 <Button
+                    testID='login'
                     onPress={() => { }}
                     title='Or login'
                 />
 
-                <View style={{
-                    flexDirection: 'row',
-                    alignItems: 'center',
-                }}>
+                <View
+                    testID='nav_dots'
+                    style={{
+                        flexDirection: 'row',
+                        alignItems: 'center',
+                    }}>
                     {Array(3).fill(0).map((_, index) => (
                         <View
                             key={index.toString()}
