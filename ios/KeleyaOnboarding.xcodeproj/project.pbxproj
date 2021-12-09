@@ -104,7 +104,6 @@
 				F3AA9936C0EBF052E0F9344A /* Pods-KeleyaOnboarding-KeleyaOnboardingTests.debug.xcconfig */,
 				EC7892750715B6749F284B77 /* Pods-KeleyaOnboarding-KeleyaOnboardingTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -485,6 +484,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 6NACL7TVN9;
 				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = KeleyaOnboarding/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -511,6 +511,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 6NACL7TVN9;
 				INFOPLIST_FILE = KeleyaOnboarding/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

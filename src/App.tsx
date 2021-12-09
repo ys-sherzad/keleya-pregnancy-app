@@ -12,16 +12,17 @@ import {
   StatusBar,
 } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
-import AuthenticationRouter from './authentication';
+import AuthenticationRouter from './authentication/onboarding';
 
 
 const App = () => {
   return (
     <NavigationContainer>
-      <SafeAreaView style={{ flex: 1 }}>
+      <AuthenticationRouter />
+      {/* <SafeAreaView style={{ flex: 1 }}>
         <StatusBar barStyle='dark-content' />
         <AuthenticationRouter />
-      </SafeAreaView>
+      </SafeAreaView> */}
     </NavigationContainer>
   );
 };
