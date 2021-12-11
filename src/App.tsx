@@ -11,19 +11,23 @@ import {
   SafeAreaView,
   StatusBar,
 } from 'react-native';
+import { SafeAreaProvider } from 'react-native-safe-area-context';
 import { NavigationContainer } from '@react-navigation/native';
-import AuthenticationRouter from './authentication/onboarding';
+import AuthenticationRouter from './authentication';
 
 
 const App = () => {
   return (
-    <NavigationContainer>
-      <AuthenticationRouter />
-      {/* <SafeAreaView style={{ flex: 1 }}>
+    <SafeAreaProvider>
+      <NavigationContainer>
+        <StatusBar barStyle='dark-content' />
+        <AuthenticationRouter />
+        {/* <SafeAreaView style={{ flex: 1 }}>
         <StatusBar barStyle='dark-content' />
         <AuthenticationRouter />
       </SafeAreaView> */}
-    </NavigationContainer>
+      </NavigationContainer>
+    </SafeAreaProvider>
   );
 };
 
