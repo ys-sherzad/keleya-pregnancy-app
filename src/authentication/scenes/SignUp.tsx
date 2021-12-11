@@ -6,13 +6,13 @@ interface SignUpProps { }
 
 const SignUp = (props: SignUpProps) => {
     return (
-        <View style={styles.container}>
+        <View testID='sign_up_screen' style={styles.container}>
             {/* <Image
                 source={require('../../../assets/images/authentication-background-image.jpg')}
                 style={styles.backgroundImage}
             /> */}
 
-            <Text testID='signup_screen'>Signup Screen</Text>
+            <Text>Signup Screen</Text>
 
         </View>
     );

@@ -5,8 +5,8 @@ interface SignInProps { }
 
 const SignIn = (props: SignInProps) => {
     return (
-        <View style={styles.container}>
-            <Text testID='signin_screen'>SignIn Screen</Text>
+        <View testID='sign_in_screen' style={styles.container}>
+            <Text>SignIn Screen</Text>
         </View>
     );
 };

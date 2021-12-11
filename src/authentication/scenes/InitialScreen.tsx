@@ -35,7 +35,7 @@ const InitialScreen = ({ navigation }: InitialScreenProps) => {
     const _goToSignIn = () => navigation.push(Screen.SignInScreen);
 
     return (
-        <>
+        <View testID="initial_screen">
             <ScrollView
                 horizontal
                 pagingEnabled
@@ -91,7 +91,7 @@ const InitialScreen = ({ navigation }: InitialScreenProps) => {
                     ))}
                 </View>
             </View>
-        </>
+        </View>
     );
 };
 
