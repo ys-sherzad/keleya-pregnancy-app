@@ -3,6 +3,8 @@ import { Text, View, StyleSheet, ScrollView, Image, Dimensions } from 'react-nat
 import Button from '../../shared/Button';
 import Space from '../../shared/Space';
 import { theme } from '../../utils/theme';
+import { RouterStackParamList, Screen } from '../types';
+import { StackScreenProps } from '@react-navigation/stack';
 
 const { height, width } = Dimensions.get('window');
 
@@ -24,9 +26,14 @@ const pages = [
     },
 ];
 
-interface InitialScreenProps { }
+type InitialScreenProps = StackScreenProps<RouterStackParamList, Screen.InitialScreen>;
 
-const InitialScreen = (props: InitialScreenProps) => {
+const InitialScreen = ({ navigation }: InitialScreenProps) => {
+
+    const _goToSignUp = () => navigation.push(Screen.SignUpScreen);
+
+    const _goToSignIn = () => navigation.push(Screen.SignInScreen);
+
     return (
         <>
             <ScrollView
@@ -61,16 +68,15 @@ const InitialScreen = (props: InitialScreenProps) => {
             <View style={styles.bottomSectionContainer}>
                 <Button
                     testID='get_started'
-                    onPress={() => { }}
+                    onPress={_goToSignUp}
                     title='Get Started'
                     primary
                 />
                 <Button
                     testID='login'
-                    onPress={() => { }}
+                    onPress={_goToSignIn}
                     title='Or login'
                 />
-
                 <View
                     testID='nav_dots'
                     style={{

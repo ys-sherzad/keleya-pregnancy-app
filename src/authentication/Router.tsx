@@ -1,23 +1,17 @@
 import * as React from 'react';
 import { Text, View, StyleSheet } from 'react-native';
 import { createStackNavigator } from '@react-navigation/stack';
-import InitialScreen from './onboarding/InitialScreen';
 
-enum Screen {
-    InitialScreen = 'InitialScreen',
-    SignUpScreen = 'SignUpScreen',
-    SignInScreen = 'SignInScreen',
-    NameScreen = 'NameScreen',
-    DateScreen = 'DateScreen',
-    WorkoutScreen = 'WorkoutScreen',
-    SuccessScreen = 'SuccessScreen',
-};
+// screens
+import InitialScreen from './scenes/InitialScreen';
+import SignUp from './scenes/SignUp';
+import SignIn from './scenes/SignIn';
+import { RouterStackParamList, Screen } from './types';
 
-interface RouterProps { }
 
-const Stack = createStackNavigator();
+const Stack = createStackNavigator<RouterStackParamList>();
 
-const Router = (props: RouterProps) => {
+const Router = () => {
     return (
         <Stack.Navigator
             initialRouteName='InitialScreen'
@@ -26,6 +20,9 @@ const Router = (props: RouterProps) => {
             }}
         >
             <Stack.Screen name={Screen.InitialScreen} component={InitialScreen} />
+            <Stack.Screen name={Screen.SignUpScreen} component={SignUp} />
+            <Stack.Screen name={Screen.SignInScreen} component={SignIn} />
+
             {/* <Stack.Screen name={Screen.SignUpScreen} component={() => <View />} />
             <Stack.Screen name={Screen.SignInScreen} component={() => <View />} />
             <Stack.Screen name={Screen.NameScreen} component={() => <View />} />
