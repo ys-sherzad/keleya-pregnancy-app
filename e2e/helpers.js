@@ -10,7 +10,7 @@ const SCREENSHOT_OPTIONS = {
 
 let screenshotIndex = 0;
 
-const takeScreenshot = () => {
+export const takeScreenshot = () => {
     // Create screenshot directory if it doesn't exist
     if (!existsSync(SCREENSHOT_DIR)) mkdirSync(SCREENSHOT_DIR);
 
@@ -40,4 +40,12 @@ const _takeScreenshotAndroid = () => {
     execSync(`adb shell rm /sdcard/${filename}`, SCREENSHOT_OPTIONS);
 };
 
-export { takeScreenshot };
+export const checkIfVisible = (elementId) => {
+    return waitFor(element(by.id(elementId))).toBeVisible();
+};
+
+export const waitAndTap = async (elementId) => {
+    await waitFor(element(by.id(elementId))).toBeVisible();
+
+    return element(by.id(elementId)).tap();
+};
