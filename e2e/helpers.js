@@ -1,6 +1,8 @@
 const { execSync } = require('child_process');
 const { existsSync, mkdirSync } = require('fs');
 
+const DEFAULT_TIMEOUT = 10000;
+
 const SCREENSHOT_DIR = './e2e/screenshots';
 
 const SCREENSHOT_OPTIONS = {
@@ -41,11 +43,16 @@ const _takeScreenshotAndroid = () => {
 };
 
 export const checkIfVisible = (elementId) => {
-    return waitFor(element(by.id(elementId))).toBeVisible();
+    return waitFor(element(by.id(elementId)))
+        .toBeVisible()
+        .withTimeout(DEFAULT_TIMEOUT);
+    // .withTimeout(DEFAULT_TIMEOUT);
 };
 
 export const waitAndTap = async (elementId) => {
-    await waitFor(element(by.id(elementId))).toBeVisible();
+    await waitFor(element(by.id(elementId)))
+        .toBeVisible()
+        .withTimeout(DEFAULT_TIMEOUT);
 
     return element(by.id(elementId)).tap();
 };
