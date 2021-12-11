@@ -1,14 +1,10 @@
 import * as Helpers from './helpers';
 
 
-describe('Testing Sign up Workflow', () => {
+describe('Testing Sign in Workflow', () => {
   beforeAll(async () => {
     await device.launchApp();
   });
-
-  // beforeEach(async () => {
-  //   await device.reloadReactNative();
-  // });
 
   // afterEach(async () => {
   //   takeScreenshot();
@@ -19,8 +15,8 @@ describe('Testing Sign up Workflow', () => {
   });
 
 
-  it('Should go to "Sign Up" screen when tapping on "Get Started" button', async () => {
-    await Helpers.waitAndTap('get_started');
+  it('Should go to "Sign in" screen when tapping on "login" button', async () => {
+    await Helpers.waitAndTap('login');
     await Helpers.checkIfVisible('sign_in_screen');
   });
 
