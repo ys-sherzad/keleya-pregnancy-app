@@ -45,19 +45,16 @@ const InitialScreen = ({ navigation }: InitialScreenProps) => {
                     <View key={index.toString()}>
                         <View style={styles.topSectionContainer}>
                             <Image
-                                testID='keleya_logo'
                                 source={page.logo}
                                 style={styles.logo}
                             />
                             <Space size={10} />
                             <Text
-                                testID='description'
                                 style={styles.description}>
                                 {page.description}
                             </Text>
                         </View>
                         <Image
-                            testID='background_image'
                             source={page.backgroundImage}
                             style={styles.image}
                         />
