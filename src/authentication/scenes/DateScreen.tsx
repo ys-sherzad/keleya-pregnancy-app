@@ -1,3 +1,4 @@
+import { StackScreenProps } from '@react-navigation/stack';
 import * as React from 'react';
 import { Text, View, StyleSheet, Image } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
@@ -7,12 +8,15 @@ import { theme } from '../../utils/theme';
 import DatePicker from '../components/DatePicker';
 import Layout from '../components/Layout';
 import Title from '../components/Title';
+import { RouterStackParamList, Screen } from '../types';
 
-interface DateScreenProps { }
+type DateScreenProps = StackScreenProps<RouterStackParamList, Screen.DateScreen>;
 
-const DateScreen = (props: DateScreenProps) => {
+const DateScreen = ({
+    navigation
+}: DateScreenProps) => {
 
-    const _goToWorkoutScreen = () => { };
+    const _goToWorkoutScreen = () => navigation.push(Screen.WorkoutScreen);
 
     return (
         <SafeAreaView
@@ -54,8 +58,6 @@ const styles = StyleSheet.create({
     container: {
         flex: 1,
         backgroundColor: theme.white,
-        // alignItems: 'center',
-        // alignItems: 'stretch'
     },
     backgroundImage: {
         width: '100%',
