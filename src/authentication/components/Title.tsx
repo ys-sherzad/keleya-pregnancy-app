@@ -1,16 +1,18 @@
 import * as React from 'react';
-import { Text, View, StyleSheet } from 'react-native';
+import { Text, View, StyleSheet, StyleProp, TextStyle } from 'react-native';
 import { theme } from '../../utils/theme';
 
 interface TitleProps {
     title: string;
+    customStyle?: StyleProp<TextStyle>;
 }
 
 const Title = ({
     title,
+    customStyle,
 }: TitleProps) => {
     return (
-        <Text style={styles.title}>{title}</Text>
+        <Text style={[styles.title, customStyle]}>{title}</Text>
     );
 };
 
