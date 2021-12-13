@@ -10,17 +10,13 @@ const Title = ({
     title,
 }: TitleProps) => {
     return (
-        <View style={styles.container}>
-            <Text style={styles.title}>{title}</Text>
-        </View>
+        <Text style={styles.title}>{title}</Text>
     );
 };
 
 export default Title;
 
 const styles = StyleSheet.create({
-    container: {
-    },
     title: {
         fontSize: 22,
         color: theme.greyish_brown,
