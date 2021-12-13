@@ -8,6 +8,7 @@ import SignUp from './scenes/SignUp';
 import SignIn from './scenes/SignIn';
 import NameScreen from './scenes/NameScreen';
 import WorkoutScreen from './scenes/WorkoutScreen';
+import SuccessScreen from './scenes/SuccessScreen';
 
 import { RouterStackParamList, Screen } from './types';
 import DateScreen from './scenes/DateScreen';
@@ -29,7 +30,7 @@ const Router = () => {
             <Stack.Screen name={Screen.NameScreen} component={NameScreen} />
             <Stack.Screen name={Screen.DateScreen} component={DateScreen} />
             <Stack.Screen name={Screen.WorkoutScreen} component={WorkoutScreen} />
-
+            <Stack.Screen name={Screen.SuccessScreen} component={SuccessScreen} />
         </Stack.Navigator>
     );
 };

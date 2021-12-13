@@ -28,7 +28,7 @@ const WorkoutScreen = ({
 }: WorkoutScreenProps) => {
     const [selectedFrequency, setSelectedFrequency] = useState(options[2]);
 
-    const _goToSuccessScreen = () => { };
+    const _goToSuccessScreen = () => navigation.push(Screen.SuccessScreen);
 
     return (
         <SafeAreaView

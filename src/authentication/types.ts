@@ -15,4 +15,5 @@ export type RouterStackParamList = {
     NameScreen: undefined;
     DateScreen: undefined;
     WorkoutScreen: undefined;
+    SuccessScreen: undefined;
 };
