@@ -12,4 +12,6 @@ export type RouterStackParamList = {
     InitialScreen: undefined;
     SignUpScreen: undefined;
     SignInScreen: undefined;
+    NameScreen: undefined;
+    DateScreen: undefined;
 };

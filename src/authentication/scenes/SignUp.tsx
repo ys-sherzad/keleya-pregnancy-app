@@ -7,26 +7,33 @@ import Input from '../components/Input';
 import Space from '../../shared/Space';
 import CheckBox from '../components/CheckBox';
 import Button from '../../shared/Button';
+import Layout from '../components/Layout';
+import { StackScreenProps } from '@react-navigation/stack';
+import { RouterStackParamList, Screen } from '../types';
 
-interface SignUpProps { }
+type SignUpProps = StackScreenProps<RouterStackParamList, Screen.SignUpScreen>;
 
-const SignUp = (props: SignUpProps) => {
+const SignUp = ({
+    navigation
+}: SignUpProps) => {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const [privacyPolicy, setPrivacyPolicy] = useState(false);
     const [termsAndConditions, setTermsAndConditions] = useState(false);
 
     const _renderPrivacyPolicyText = () => (
-        <Text>
+        <Text style={{ flex: 1 }}>
             I've read the <Text>privacy policy</Text>
         </Text>
     );
 
     const _renderTermsAndConditionsText = () => (
-        <Text>
+        <Text style={{ flex: 1 }}>
             I accept <Text>the terms & conditions</Text> and <Text>Keleya's advice</Text>
         </Text>
     );
+
+    const _goToNameScreen = () => navigation.push(Screen.NameScreen);
 
     return (
         <SafeAreaView
@@ -39,9 +46,9 @@ const SignUp = (props: SignUpProps) => {
                 style={styles.backgroundImage}
             />
 
-            <View style={{ flex: 1, marginTop: -40, paddingHorizontal: 40 }}>
+            <Layout>
                 <Title
-                    title={`Add your details below to set\nup and account`}
+                    title={`Add your details below to set up and account`}
                 />
 
                 <Space size={30} />
@@ -50,7 +57,6 @@ const SignUp = (props: SignUpProps) => {
                     placeholder='example@gmail.com'
                     value={email}
                     onChangeText={(text) => setEmail(text)}
-
                 />
 
                 <Space size={26} />
@@ -81,12 +87,11 @@ const SignUp = (props: SignUpProps) => {
                 <View style={styles.flexOne} />
 
                 <Button
-                    onPress={() => { }}
+                    onPress={_goToNameScreen}
                     title='Create Account'
                     primary
                 />
-
-            </View>
+            </Layout>
 
 
 
@@ -106,9 +111,6 @@ const styles = StyleSheet.create({
     },
     backgroundImage: {
         width: '100%',
-        // height: 500,
-        // height: '100%',
         resizeMode: 'cover',
-        // paddingTop: 0,
     }
 });

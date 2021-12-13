@@ -10,6 +10,7 @@ interface InputProps {
   secureTextEntry?: boolean;
   testID?: string;
   customInputStyle?: StyleProp<TextStyle>;
+  customInputContainerStyle?: StyleProp<TextStyle>;
 }
 
 const Input = ({
@@ -18,11 +19,12 @@ const Input = ({
   value,
   rightIcon,
   customInputStyle,
+  customInputContainerStyle,
   testID,
   secureTextEntry = false,
 }: InputProps) => {
   return (
-    <View style={styles.container}>
+    <View style={[styles.container, customInputContainerStyle]}>
       <TextInput
         testID={testID}
         placeholder={placeholder}
@@ -55,6 +57,5 @@ const styles = StyleSheet.create({
     paddingBottom: 10,
     fontSize: 16,
     color: theme.greyish_brown,
-    alignSelf: 'center'
   }
 });
