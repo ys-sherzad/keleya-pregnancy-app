@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { Text, View, StyleSheet, TouchableOpacity } from 'react-native';
+import { Text, View, StyleSheet, TouchableOpacity, StyleProp, TextStyle } from 'react-native';
 import { theme } from '../utils/theme';
 
 interface ButtonProps {
@@ -7,12 +7,14 @@ interface ButtonProps {
     title: string;
     primary?: boolean;
     testID?: string;
+    customTextStyle?: StyleProp<TextStyle>;
 }
 
 const Button = ({
     onPress,
     title,
     testID,
+    customTextStyle,
     primary = false,
 }: ButtonProps) => {
 
@@ -24,7 +26,7 @@ const Button = ({
             {...{ testID }}
             {...{ onPress }}
             style={[styles.btn, buttonStyle]}>
-            <Text style={[styles.title, titleStyle]}>{title}</Text>
+            <Text style={[styles.title, titleStyle, customTextStyle]}>{title}</Text>
         </TouchableOpacity>
     );
 };
