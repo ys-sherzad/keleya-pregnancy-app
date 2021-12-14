@@ -4,15 +4,14 @@ import { Text, View, StyleSheet, Image } from 'react-native';
 import { RouterStackParamList, Screen } from '../types';
 import { theme } from '../../utils/theme';
 import { SafeAreaView } from 'react-native-safe-area-context';
-import Layout from '../components/Layout';
 import Title from '../components/Title';
 import Space from '../../shared/Space';
 import Button from '../../shared/Button';
+import Bell from '../../../assets/icons/bell.svg';
 
 type SuccessScreenProps = StackScreenProps<RouterStackParamList, Screen.SuccessScreen>;
 
 const SuccessScreen = ({ }: SuccessScreenProps) => {
-
     return (
         <SafeAreaView
             edges={['left', 'right', 'bottom']}
@@ -25,7 +24,7 @@ const SuccessScreen = ({ }: SuccessScreenProps) => {
             />
 
             <View style={styles.topSection}>
-                <Text>ICON</Text>
+                <Bell height={50} width={50} fill={theme.greyish_brown} />
 
                 <Space size={20} />
 
@@ -45,11 +44,11 @@ const SuccessScreen = ({ }: SuccessScreenProps) => {
                     }}
                 />
 
-                <Space size={20} />
+                <Space size={10} />
 
                 <Button
                     onPress={() => { }}
-                    title='Continue'
+                    title='Allow notifications'
                     primary
                 />
             </View>
@@ -73,7 +72,7 @@ const styles = StyleSheet.create({
     },
     topSection: {
         position: 'absolute',
-        top: 90,
+        top: 80,
         width: '100%',
         paddingHorizontal: 50,
         alignItems: 'center'
