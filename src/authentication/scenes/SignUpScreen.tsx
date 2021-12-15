@@ -23,14 +23,14 @@ const SignUp = ({
     const [termsAndConditions, setTermsAndConditions] = useState(false);
 
     const _renderPrivacyPolicyText = () => (
-        <Text style={{ flex: 1 }}>
-            I've read the <Text>privacy policy</Text>
+        <Text style={styles.checkboxText}>
+            I've read the <Text style={{ fontWeight: '700' }}>privacy policy</Text>
         </Text>
     );
 
     const _renderTermsAndConditionsText = () => (
-        <Text style={{ flex: 1 }}>
-            I accept <Text>the terms & conditions</Text> and <Text>Keleya's advice</Text>
+        <Text style={styles.checkboxText}>
+            I accept <Text style={{ fontWeight: '700' }}>the terms & conditions</Text> and <Text style={{ fontWeight: '700' }}>Keleya's advice</Text>
         </Text>
     );
 
@@ -89,12 +89,10 @@ const SignUp = ({
 
                 <Button
                     onPress={_goToNameScreen}
-                    title='Create Account'
+                    title='Create account'
                     primary
                 />
             </Layout>
-
-
 
         </SafeAreaView>
     );
@@ -113,5 +111,10 @@ const styles = StyleSheet.create({
     backgroundImage: {
         width: '100%',
         resizeMode: 'cover',
+    },
+    checkboxText: {
+        flex: 1,
+        fontSize: 13,
+        fontWeight: '500',
     }
 });
