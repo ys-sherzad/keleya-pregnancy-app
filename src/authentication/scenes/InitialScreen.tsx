@@ -1,5 +1,6 @@
 import * as React from 'react';
-import { Text, View, StyleSheet, ScrollView, Image, Dimensions } from 'react-native';
+import { View, StyleSheet, ScrollView, Image, Dimensions } from 'react-native';
+import Text from '../../shared/Text';
 import Button from '../../shared/Button';
 import Space from '../../shared/Space';
 import { theme } from '../../utils/theme';
@@ -115,7 +116,9 @@ const styles = StyleSheet.create({
     },
     description: {
         textAlign: 'center',
-        fontSize: 18,
+        fontSize: 23,
+        fontWeight: '600',
+        color: theme.greyish_brown
     },
     bottomSectionContainer: {
         position: 'absolute',

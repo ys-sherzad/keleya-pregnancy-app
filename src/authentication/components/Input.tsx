@@ -26,7 +26,7 @@ const Input = ({
   isPassword = false,
 }: InputProps) => {
 
-  // state for showing/not showing text characters
+  // The state for showing/not showing text characters
   const [isTextSecure, setIsTextSecure] = useState(isPassword);
 
   return (
@@ -36,7 +36,7 @@ const Input = ({
         placeholder={placeholder}
         value={value}
         onChangeText={onChangeText}
-        style={[styles.input, customInputStyle]}
+        style={[styles.defaultInputStyle, customInputStyle]}
         secureTextEntry={isTextSecure}
         placeholderTextColor={theme.warm_grey}
         selectionColor={theme.greyish_brown}
@@ -54,8 +54,6 @@ const Input = ({
           <Space size={10} horizontal />
         </>
       )}
-
-
     </View>
   );
 };
@@ -65,14 +63,17 @@ export default Input;
 const styles = StyleSheet.create({
   container: {
     flexDirection: 'row',
+    alignItems: 'center',
     borderBottomWidth: 1,
     borderBottomColor: theme.greyish_brown,
+    paddingVertical: 10,
   },
-  input: {
+  defaultInputStyle: {
     flex: 1,
     paddingHorizontal: 20,
-    paddingBottom: 10,
     fontSize: 16,
+    fontFamily: 'Raleway',
+    fontWeight: '600',
     color: theme.greyish_brown,
   }
 });

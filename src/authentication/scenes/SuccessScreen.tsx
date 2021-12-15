@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { StackScreenProps } from '@react-navigation/stack';
-import { Text, View, StyleSheet, Image } from 'react-native';
+import { View, StyleSheet, Image } from 'react-native';
 import { RouterStackParamList, Screen } from '../types';
 import { theme } from '../../utils/theme';
 import { SafeAreaView } from 'react-native-safe-area-context';
@@ -39,8 +39,7 @@ const SuccessScreen = ({ }: SuccessScreenProps) => {
                     onPress={() => { }}
                     title='Skip'
                     customTextStyle={{
-                        fontSize: 16,
-                        fontWeight: '400'
+                        fontSize: 18,
                     }}
                 />
 

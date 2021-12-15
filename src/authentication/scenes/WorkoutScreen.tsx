@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { StackScreenProps } from '@react-navigation/stack';
-import { Text, View, StyleSheet, Image } from 'react-native';
+import { View, StyleSheet, Image } from 'react-native';
 import { RouterStackParamList, Screen } from '../types';
 import { theme } from '../../utils/theme';
 import { SafeAreaView } from 'react-native-safe-area-context';
@@ -47,11 +47,11 @@ const WorkoutScreen = ({
 
                 <Picker
                     selectedValue={selectedFrequency}
-                    onValueChange={(itemValue, itemIndex) =>
+                    onValueChange={(itemValue) =>
                         setSelectedFrequency(itemValue)
                     }>
                     {options.map(opt => (
-                        <Picker.Item key={opt} label={opt} value={opt} />
+                        <Picker.Item key={opt} label={opt} value={opt} fontFamily='Raleway' />
                     ))}
                 </Picker>
 
@@ -91,5 +91,8 @@ const styles = StyleSheet.create({
     backgroundImage: {
         width: '100%',
         resizeMode: 'cover',
+    },
+    pickerItemStyle: {
+        fontFamily: 'Raleway'
     }
 });

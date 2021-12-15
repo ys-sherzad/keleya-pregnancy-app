@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Text, View, StyleSheet, Image } from 'react-native';
+import { View, StyleSheet, Image } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { theme } from '../../utils/theme';
 import Title from '../components/Title';
@@ -10,6 +10,7 @@ import Button from '../../shared/Button';
 import Layout from '../components/Layout';
 import { StackScreenProps } from '@react-navigation/stack';
 import { RouterStackParamList, Screen } from '../types';
+import Text from '../../shared/Text';
 
 type SignUpProps = StackScreenProps<RouterStackParamList, Screen.SignUpScreen>;
 
@@ -59,7 +60,7 @@ const SignUp = ({
                     onChangeText={(text) => setEmail(text)}
                 />
 
-                <Space size={26} />
+                <Space size={20} />
 
                 <Input
                     placeholder='Enter a password'
@@ -68,7 +69,7 @@ const SignUp = ({
                     isPassword={true}
                 />
 
-                <Space size={26} />
+                <Space size={20} />
 
                 <CheckBox
                     value={privacyPolicy}
@@ -76,7 +77,7 @@ const SignUp = ({
                     onValueChange={() => setPrivacyPolicy(!privacyPolicy)}
                 />
 
-                <Space size={20} />
+                <Space size={16} />
 
                 <CheckBox
                     value={termsAndConditions}

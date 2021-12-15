@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { Text, View, StyleSheet, TouchableOpacity } from 'react-native';
+import { View, StyleSheet, TouchableOpacity } from 'react-native';
 import Space from '../../shared/Space';
 import CheckIcon from '../../../assets/icons/check.svg';
 import { theme } from '../../utils/theme';

@@ -1,5 +1,6 @@
 import * as React from 'react';
-import { Text, View, StyleSheet, StyleProp, TextStyle } from 'react-native';
+import { StyleSheet, StyleProp, TextStyle } from 'react-native';
+import Text from '../../shared/Text';
 import { theme } from '../../utils/theme';
 
 interface TitleProps {
@@ -23,5 +24,6 @@ const styles = StyleSheet.create({
         fontSize: 22,
         color: theme.greyish_brown,
         textAlign: 'center',
+        paddingHorizontal: 8
     }
 });

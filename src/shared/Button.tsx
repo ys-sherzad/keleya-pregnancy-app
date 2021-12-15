@@ -1,6 +1,7 @@
 import * as React from 'react';
-import { Text, View, StyleSheet, TouchableOpacity, StyleProp, TextStyle } from 'react-native';
+import { StyleSheet, TouchableOpacity, StyleProp, TextStyle } from 'react-native';
 import { theme } from '../utils/theme';
+import Text from './Text';
 
 interface ButtonProps {
     onPress: () => void;
@@ -18,15 +19,15 @@ const Button = ({
     primary = false,
 }: ButtonProps) => {
 
-    const buttonStyle = primary ? { backgroundColor: theme.pale_teal } : { backgroundColor: 'transparent' };
-    const titleStyle = primary ? { color: theme.white } : { color: theme.greyish_brown };
+    const buttonBackgroundColorStyle = primary ? { backgroundColor: theme.pale_teal } : { backgroundColor: 'transparent' };
+    const titleColorStyle = primary ? { color: theme.white } : { color: theme.greyish_brown };
 
     return (
         <TouchableOpacity
             {...{ testID }}
             {...{ onPress }}
-            style={[styles.btn, buttonStyle]}>
-            <Text style={[styles.title, titleStyle, customTextStyle]}>{title}</Text>
+            style={[styles.defaultBtnStyle, buttonBackgroundColorStyle]}>
+            <Text style={[styles.defaultTitleStyle, titleColorStyle, customTextStyle]}>{title}</Text>
         </TouchableOpacity>
     );
 };
@@ -34,15 +35,15 @@ const Button = ({
 export default Button;
 
 const styles = StyleSheet.create({
-    btn: {
+    defaultBtnStyle: {
         height: 57,
         width: '100%',
         justifyContent: 'center',
         alignItems: 'center',
         borderRadius: 8,
     },
-    title: {
-        fontSize: 22,
-        fontWeight: '500'
+    defaultTitleStyle: {
+        fontSize: 24,
+        fontWeight: '600'
     }
 });
