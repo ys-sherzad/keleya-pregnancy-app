@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { View, StyleSheet, TextInput, StyleProp, TextStyle, TextInputProps } from 'react-native';
+import { View, StyleSheet, TextInput, StyleProp, TextStyle } from 'react-native';
 import { theme } from '../../utils/theme';
 import EyeOn from '../../../assets/icons/eye-on.svg';
 import EyeOff from '../../../assets/icons/eye-off.svg';
