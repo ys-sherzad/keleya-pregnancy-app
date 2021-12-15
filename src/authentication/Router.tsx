@@ -4,7 +4,7 @@ import { createStackNavigator } from '@react-navigation/stack';
 
 // screens
 import InitialScreen from './scenes/InitialScreen';
-import SignUp from './scenes/SignUp';
+import SignUpScreen from './scenes/SignUpScreen';
 import SignInScreen from './scenes/SignInScreen';
 import NameScreen from './scenes/NameScreen';
 import WorkoutScreen from './scenes/WorkoutScreen';
@@ -25,7 +25,7 @@ const Router = () => {
             }}
         >
             <Stack.Screen name={Screen.InitialScreen} component={InitialScreen} />
-            <Stack.Screen name={Screen.SignUpScreen} component={SignUp} />
+            <Stack.Screen name={Screen.SignUpScreen} component={SignUpScreen} />
             <Stack.Screen name={Screen.SignInScreen} component={SignInScreen} />
             <Stack.Screen name={Screen.NameScreen} component={NameScreen} />
             <Stack.Screen name={Screen.DateScreen} component={DateScreen} />
