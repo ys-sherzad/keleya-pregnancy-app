@@ -39,11 +39,11 @@ const SuccessScreen = ({ }: SuccessScreenProps) => {
                     onPress={() => { }}
                     title='Skip'
                     customTextStyle={{
-                        fontSize: 18,
+                        fontSize: 19,
                     }}
                 />
 
-                <Space size={10} />
+                <Space size={20} />
 
                 <Button
                     onPress={() => { }}
@@ -71,7 +71,7 @@ const styles = StyleSheet.create({
     },
     topSection: {
         position: 'absolute',
-        top: 80,
+        top: 90,
         width: '100%',
         paddingHorizontal: 50,
         alignItems: 'center'

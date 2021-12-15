@@ -69,7 +69,7 @@ const SignUp = ({
                     isPassword={true}
                 />
 
-                <Space size={20} />
+                <Space size={22} />
 
                 <CheckBox
                     value={privacyPolicy}
@@ -77,7 +77,7 @@ const SignUp = ({
                     onValueChange={() => setPrivacyPolicy(!privacyPolicy)}
                 />
 
-                <Space size={16} />
+                <Space size={18} />
 
                 <CheckBox
                     value={termsAndConditions}
@@ -114,7 +114,7 @@ const styles = StyleSheet.create({
     },
     checkboxText: {
         flex: 1,
-        fontSize: 13,
+        fontSize: 14,
         fontWeight: '500',
     }
 });

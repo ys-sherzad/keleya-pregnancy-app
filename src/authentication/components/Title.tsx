@@ -21,9 +21,9 @@ export default Title;
 
 const styles = StyleSheet.create({
     title: {
-        fontSize: 22,
+        fontSize: 24,
         color: theme.greyish_brown,
         textAlign: 'center',
-        paddingHorizontal: 8
+        paddingHorizontal: 5
     }
 });

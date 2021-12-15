@@ -62,12 +62,12 @@ const SignIn = ({
                     title='Have you forgotten your password?'
                     customTextStyle={{
                         textAlign: 'center',
-                        fontSize: 18,
+                        fontSize: 19,
                         fontWeight: '400'
                     }}
                 />
 
-                <Space size={14} />
+                <Space size={12} />
 
                 <Button
                     onPress={_goToSuccessScreen}

@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Text, View, StyleSheet } from 'react-native';
 import DateTimePicker from '@react-native-community/datetimepicker';
+import { theme } from '../../utils/theme';
 
 interface DatePickerProps { }
 
@@ -26,5 +27,4 @@ const styles = StyleSheet.create({
         width: 128,
         alignSelf: 'center'
     }
-
 });

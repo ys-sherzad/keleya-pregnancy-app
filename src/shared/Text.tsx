@@ -27,6 +27,6 @@ export default Text;
 const styles = StyleSheet.create({
     defaultStyle: {
         fontFamily: 'Raleway',
-        color: theme.greyish_brown
+        color: theme.greyish_brown,
     }
 });

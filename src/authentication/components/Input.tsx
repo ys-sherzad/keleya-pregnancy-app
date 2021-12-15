@@ -71,7 +71,7 @@ const styles = StyleSheet.create({
   defaultInputStyle: {
     flex: 1,
     paddingHorizontal: 20,
-    fontSize: 16,
+    fontSize: 19,
     fontFamily: 'Raleway',
     fontWeight: '500',
     color: theme.greyish_brown,
