@@ -11,6 +11,7 @@ import Layout from '../components/Layout';
 import { StackScreenProps } from '@react-navigation/stack';
 import { RouterStackParamList, Screen } from '../types';
 import Text from '../../shared/Text';
+import KeyboardAwareView from '../../shared/KeyboardAwareView';
 
 type SignUpProps = StackScreenProps<RouterStackParamList, Screen.SignUpScreen>;
 
@@ -21,6 +22,9 @@ const SignUp = ({
     const [password, setPassword] = useState('');
     const [privacyPolicy, setPrivacyPolicy] = useState(false);
     const [termsAndConditions, setTermsAndConditions] = useState(false);
+
+    const _goToNameScreen = () => navigation.push(Screen.NameScreen);
+
 
     const _renderPrivacyPolicyText = () => (
         <Text style={styles.checkboxText}>
@@ -34,66 +38,65 @@ const SignUp = ({
         </Text>
     );
 
-    const _goToNameScreen = () => navigation.push(Screen.NameScreen);
-
     return (
         <SafeAreaView
             edges={['left', 'right', 'bottom']}
             testID='sign_up_screen'
             style={styles.container}
         >
-            <Image
-                source={require('../../../assets/images/authentication-background-image.jpg')}
-                style={styles.backgroundImage}
-            />
-
-            <Layout>
-                <Title
-                    title={`Add your details below to set up and account`}
+            <KeyboardAwareView>
+                <Image
+                    source={require('../../../assets/images/authentication-background-image.jpg')}
+                    style={styles.backgroundImage}
                 />
 
-                <Space size={30} />
+                <Layout>
+                    <Title
+                        title={`Add your details below to set up and account`}
+                    />
 
-                <Input
-                    placeholder='example@gmail.com'
-                    value={email}
-                    onChangeText={(text) => setEmail(text)}
-                />
+                    <Space size={30} />
 
-                <Space size={20} />
+                    <Input
+                        placeholder='example@gmail.com'
+                        value={email}
+                        onChangeText={(text) => setEmail(text)}
+                    />
 
-                <Input
-                    placeholder='Enter a password'
-                    value={password}
-                    onChangeText={(text) => setPassword(text)}
-                    isPassword={true}
-                />
+                    <Space size={20} />
 
-                <Space size={22} />
+                    <Input
+                        placeholder='Enter a password'
+                        value={password}
+                        onChangeText={(text) => setPassword(text)}
+                        isPassword={true}
+                    />
 
-                <CheckBox
-                    value={privacyPolicy}
-                    description={_renderPrivacyPolicyText()}
-                    onValueChange={() => setPrivacyPolicy(!privacyPolicy)}
-                />
+                    <Space size={22} />
 
-                <Space size={18} />
+                    <CheckBox
+                        value={privacyPolicy}
+                        description={_renderPrivacyPolicyText()}
+                        onValueChange={() => setPrivacyPolicy(!privacyPolicy)}
+                    />
 
-                <CheckBox
-                    value={termsAndConditions}
-                    description={_renderTermsAndConditionsText()}
-                    onValueChange={() => setTermsAndConditions(!termsAndConditions)}
-                />
+                    <Space size={18} />
 
-                <View style={styles.flexOne} />
+                    <CheckBox
+                        value={termsAndConditions}
+                        description={_renderTermsAndConditionsText()}
+                        onValueChange={() => setTermsAndConditions(!termsAndConditions)}
+                    />
 
-                <Button
-                    onPress={_goToNameScreen}
-                    title='Create account'
-                    primary
-                />
-            </Layout>
+                    <View style={styles.flexOne} />
 
+                    <Button
+                        onPress={_goToNameScreen}
+                        title='Create account'
+                        primary
+                    />
+                </Layout>
+            </KeyboardAwareView>
         </SafeAreaView>
     );
 };

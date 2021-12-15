@@ -9,6 +9,7 @@ import { theme } from '../../utils/theme';
 import Input from '../components/Input';
 import Layout from '../components/Layout';
 import Title from '../components/Title';
+import KeyboardAwareView from '../../shared/KeyboardAwareView';
 
 type SignInProps = StackScreenProps<RouterStackParamList, Screen.SignInScreen>;
 
@@ -27,56 +28,55 @@ const SignIn = ({
             testID='sign_up_screen'
             style={styles.container}
         >
-            <Image
-                source={require('../../../assets/images/authentication-background-image.jpg')}
-                style={styles.backgroundImage}
-            />
-
-            <Layout>
-                <Title
-                    title={`Welcome back!`}
+            <KeyboardAwareView>
+                <Image
+                    source={require('../../../assets/images/authentication-background-image.jpg')}
+                    style={styles.backgroundImage}
                 />
 
-                <Space size={30} />
+                <Layout>
+                    <Title
+                        title={`Welcome back!`}
+                    />
 
-                <Input
-                    placeholder='example@gmail.com'
-                    value={email}
-                    onChangeText={(text) => setEmail(text)}
-                />
+                    <Space size={30} />
 
-                <Space size={26} />
+                    <Input
+                        placeholder='example@gmail.com'
+                        value={email}
+                        onChangeText={(text) => setEmail(text)}
+                    />
 
-                <Input
-                    placeholder='Enter a password'
-                    value={password}
-                    onChangeText={(text) => setPassword(text)}
-                    isPassword={true}
-                />
+                    <Space size={26} />
 
-                <View style={styles.flexOne} />
+                    <Input
+                        placeholder='Enter a password'
+                        value={password}
+                        onChangeText={(text) => setPassword(text)}
+                        isPassword={true}
+                    />
 
-                <Button
-                    onPress={() => { }}
-                    title='Have you forgotten your password?'
-                    customTextStyle={{
-                        textAlign: 'center',
-                        fontSize: 19,
-                        fontWeight: '400'
-                    }}
-                />
+                    <View style={styles.flexOne} />
 
-                <Space size={12} />
+                    <Button
+                        onPress={() => { }}
+                        title='Have you forgotten your password?'
+                        customTextStyle={{
+                            textAlign: 'center',
+                            fontSize: 19,
+                            fontWeight: '400'
+                        }}
+                    />
 
-                <Button
-                    onPress={_goToSuccessScreen}
-                    title='Log in'
-                    primary
-                />
-            </Layout>
+                    <Space size={12} />
 
-
-
+                    <Button
+                        onPress={_goToSuccessScreen}
+                        title='Log in'
+                        primary
+                    />
+                </Layout>
+            </KeyboardAwareView>
         </SafeAreaView>
     );
 };
