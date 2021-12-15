@@ -63,5 +63,7 @@
 		<string>Raleway-SemiBold.ttf</string>
 		<string>Raleway-Thin.ttf</string>
 	</array>
+	<key>UIUserInterfaceStyle</key>
+	<string>Light</string>
 </dict>
 </plist>
