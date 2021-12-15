@@ -1,11 +1,11 @@
 import * as React from 'react';
-import { Text, View, StyleSheet } from 'react-native';
+import { StyleSheet } from 'react-native';
 import { createStackNavigator } from '@react-navigation/stack';
 
 // screens
 import InitialScreen from './scenes/InitialScreen';
 import SignUp from './scenes/SignUp';
-import SignIn from './scenes/SignIn';
+import SignInScreen from './scenes/SignInScreen';
 import NameScreen from './scenes/NameScreen';
 import WorkoutScreen from './scenes/WorkoutScreen';
 import SuccessScreen from './scenes/SuccessScreen';
@@ -26,7 +26,7 @@ const Router = () => {
         >
             <Stack.Screen name={Screen.InitialScreen} component={InitialScreen} />
             <Stack.Screen name={Screen.SignUpScreen} component={SignUp} />
-            <Stack.Screen name={Screen.SignInScreen} component={SignIn} />
+            <Stack.Screen name={Screen.SignInScreen} component={SignInScreen} />
             <Stack.Screen name={Screen.NameScreen} component={NameScreen} />
             <Stack.Screen name={Screen.DateScreen} component={DateScreen} />
             <Stack.Screen name={Screen.WorkoutScreen} component={WorkoutScreen} />

@@ -65,7 +65,7 @@ const SignUp = ({
                     placeholder='Enter a password'
                     value={password}
                     onChangeText={(text) => setPassword(text)}
-                    secureTextEntry={true}
+                    isPassword={true}
                 />
 
                 <Space size={26} />

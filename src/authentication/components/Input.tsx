@@ -1,13 +1,16 @@
-import * as React from 'react';
+import React, { useState } from 'react';
 import { Text, View, StyleSheet, TextInput, StyleProp, TextStyle } from 'react-native';
 import { theme } from '../../utils/theme';
+import EyeOn from '../../../assets/icons/eye-on.svg';
+import EyeOff from '../../../assets/icons/eye-off.svg';
+import { TouchableOpacity } from 'react-native-gesture-handler';
+import Space from '../../shared/Space';
 
 interface InputProps {
   placeholder: string;
   onChangeText: (text: string) => void;
   value: string;
-  rightIcon?: any,
-  secureTextEntry?: boolean;
+  isPassword?: boolean;
   testID?: string;
   customInputStyle?: StyleProp<TextStyle>;
   customInputContainerStyle?: StyleProp<TextStyle>;
@@ -17,12 +20,15 @@ const Input = ({
   placeholder,
   onChangeText,
   value,
-  rightIcon,
   customInputStyle,
   customInputContainerStyle,
   testID,
-  secureTextEntry = false,
+  isPassword = false,
 }: InputProps) => {
+
+  // state for showing/not showing text characters
+  const [isTextSecure, setIsTextSecure] = useState(isPassword);
+
   return (
     <View style={[styles.container, customInputContainerStyle]}>
       <TextInput
@@ -31,14 +37,25 @@ const Input = ({
         value={value}
         onChangeText={onChangeText}
         style={[styles.input, customInputStyle]}
-        secureTextEntry={secureTextEntry}
+        secureTextEntry={isTextSecure}
         placeholderTextColor={theme.warm_grey}
         selectionColor={theme.greyish_brown}
       />
 
-      {rightIcon && (
-        <View style={{ height: 20, width: 20, backgroundColor: 'green' }} />
+      {isPassword && (
+        <>
+          <TouchableOpacity onPress={() => setIsTextSecure(isTextSecure => !isTextSecure)}>
+            {isTextSecure
+              ? (<EyeOn height={20} width={20} fill={theme.greyish_brown} />)
+              : (<EyeOff height={20} width={20} fill={theme.greyish_brown} />)
+            }
+          </TouchableOpacity>
+
+          <Space size={10} horizontal />
+        </>
       )}
+
+
     </View>
   );
 };
