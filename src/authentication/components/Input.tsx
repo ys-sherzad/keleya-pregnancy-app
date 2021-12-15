@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Text, View, StyleSheet, TextInput, StyleProp, TextStyle } from 'react-native';
+import { View, StyleSheet, TextInput, StyleProp, TextStyle } from 'react-native';
 import { theme } from '../../utils/theme';
 import EyeOn from '../../../assets/icons/eye-on.svg';
 import EyeOff from '../../../assets/icons/eye-off.svg';
@@ -73,7 +73,7 @@ const styles = StyleSheet.create({
     paddingHorizontal: 20,
     fontSize: 16,
     fontFamily: 'Raleway',
-    fontWeight: '600',
+    fontWeight: '500',
     color: theme.greyish_brown,
   }
 });
