@@ -1,5 +1,6 @@
 import React from 'react';
 import { Text as RNText, StyleSheet, StyleProp, TextStyle } from 'react-native';
+import { theme } from '../utils/theme';
 
 type TextProps = React.ComponentProps<typeof RNText> & {
     children: React.ReactNode;
@@ -25,6 +26,7 @@ export default Text;
 
 const styles = StyleSheet.create({
     defaultStyle: {
-        fontFamily: 'Raleway'
+        fontFamily: 'Raleway',
+        color: theme.greyish_brown
     }
 });
