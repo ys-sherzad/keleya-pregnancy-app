@@ -25,8 +25,11 @@ const SignUp = ({
     const {
         control,
         handleSubmit,
-        formState: { errors, isValid, touchedFields }
-
+        formState: {
+            errors,
+            isValid,
+            touchedFields,
+        }
     } = useForm({
         mode: 'onChange',
         defaultValues: {
@@ -103,7 +106,11 @@ const SignUp = ({
                                 onBlur={onBlur}
                                 clearTextOnFocus={true}
                                 isPassword={true}
-                                error={errors.password && touchedFields.password && errors.password.message}
+                                error={
+                                    errors.password
+                                    && touchedFields.password
+                                    && errors.password.message
+                                }
                             />
                         )}
                     />
