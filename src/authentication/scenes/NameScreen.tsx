@@ -53,7 +53,7 @@ const NameScreen = ({
                     <Button
                         onPress={_goToDateScreen}
                         title='Continue'
-                        primary
+                        mode='contained'
                     />
                 </Layout>
             </KeyboardAwareView>

@@ -48,7 +48,7 @@ const SuccessScreen = ({ }: SuccessScreenProps) => {
                 <Button
                     onPress={() => { }}
                     title='Allow notifications'
-                    primary
+                    mode='contained'
                 />
             </View>
         </SafeAreaView>

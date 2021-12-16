@@ -6,7 +6,8 @@ import Text from './Text';
 interface ButtonProps {
     onPress: () => void;
     title: string;
-    primary?: boolean;
+    mode?: 'text' | 'contained',
+    disabled?: boolean,
     testID?: string;
     customTextStyle?: StyleProp<TextStyle>;
 }
@@ -16,18 +17,28 @@ const Button = ({
     title,
     testID,
     customTextStyle,
-    primary = false,
+    mode = 'text',
+    disabled = false,
 }: ButtonProps) => {
 
-    const buttonBackgroundColorStyle = primary ? { backgroundColor: theme.pale_teal } : { backgroundColor: 'transparent' };
-    const titleColorStyle = primary ? { color: theme.white } : { color: theme.greyish_brown };
+    const getButtonColor = () => {
+        if (disabled) return theme.warm_grey;
+        if (mode === 'contained') return theme.pale_teal;
+        return 'transparent';
+    };
+
+    const getTextColor = () => {
+        if (mode === 'contained') return theme.white;
+        return theme.greyish_brown;
+    };
 
     return (
         <TouchableOpacity
             {...{ testID }}
             {...{ onPress }}
-            style={[styles.defaultBtnStyle, buttonBackgroundColorStyle]}>
-            <Text style={[styles.defaultTitleStyle, titleColorStyle, customTextStyle]}>{title}</Text>
+            {...{ disabled }}
+            style={[styles.defaultBtnStyle, { backgroundColor: getButtonColor() }]}>
+            <Text style={[styles.defaultTitleStyle, customTextStyle, { color: getTextColor() }]}>{title}</Text>
         </TouchableOpacity>
     );
 };
@@ -45,5 +56,6 @@ const styles = StyleSheet.create({
     defaultTitleStyle: {
         fontSize: 24,
         fontWeight: '600'
-    }
+    },
+
 });

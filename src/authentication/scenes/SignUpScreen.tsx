@@ -93,7 +93,7 @@ const SignUp = ({
                     <Button
                         onPress={_goToNameScreen}
                         title='Create account'
-                        primary
+                        mode='contained'
                     />
                 </Layout>
             </KeyboardAwareView>

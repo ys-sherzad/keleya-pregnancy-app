@@ -60,7 +60,7 @@ const WorkoutScreen = ({
                 <Button
                     onPress={_goToSuccessScreen}
                     title='Continue'
-                    primary
+                    mode='contained'
                 />
             </Layout>
 

@@ -42,7 +42,7 @@ const DateScreen = ({
                 <Button
                     onPress={_goToWorkoutScreen}
                     title='Continue'
-                    primary
+                    mode='contained'
                 />
             </Layout>
         </SafeAreaView>

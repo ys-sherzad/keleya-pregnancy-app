@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { StackScreenProps } from '@react-navigation/stack';
 import { RouterStackParamList, Screen } from '../types';
 import { View, StyleSheet, Image } from 'react-native';
@@ -10,6 +10,8 @@ import Input from '../components/Input';
 import Layout from '../components/Layout';
 import Title from '../components/Title';
 import KeyboardAwareView from '../../shared/KeyboardAwareView';
+import { useForm, Controller } from 'react-hook-form';
+import { emailRules, signInPasswordRules } from '../../utils/validationRules';
 
 type SignInProps = StackScreenProps<RouterStackParamList, Screen.SignInScreen>;
 
@@ -17,8 +19,18 @@ const SignIn = ({
     navigation
 }: SignInProps) => {
 
-    const [email, setEmail] = useState('');
-    const [password, setPassword] = useState('');
+    const {
+        control,
+        handleSubmit,
+        formState: { errors, isValid, touchedFields }
+
+    } = useForm({
+        mode: 'onChange',
+        defaultValues: {
+            email: '',
+            password: ''
+        }
+    });
 
     const _goToSuccessScreen = () => navigation.push(Screen.SuccessScreen);
 
@@ -41,19 +53,41 @@ const SignIn = ({
 
                     <Space size={30} />
 
-                    <Input
-                        placeholder='example@gmail.com'
-                        value={email}
-                        onChangeText={(text) => setEmail(text)}
+                    <Controller
+                        {...{ control }}
+                        name='email'
+                        rules={emailRules}
+                        render={({ field: { onChange, value, onBlur } }) => (
+                            <Input
+                                placeholder='example@gmail.com'
+                                value={value}
+                                onChangeText={onChange}
+                                onBlur={onBlur}
+                                autoCapitalize='none'
+                                autoCorrect={false}
+                                keyboardType='email-address'
+                                error={errors.email && touchedFields.email && errors.email?.message}
+                            />
+                        )}
                     />
 
                     <Space size={26} />
 
-                    <Input
-                        placeholder='Enter a password'
-                        value={password}
-                        onChangeText={(text) => setPassword(text)}
-                        isPassword={true}
+                    <Controller
+                        {...{ control }}
+                        name='password'
+                        rules={signInPasswordRules}
+                        render={({ field: { onChange, value, onBlur } }) => (
+                            <Input
+                                placeholder='Enter a password'
+                                value={value}
+                                onChangeText={onChange}
+                                onBlur={onBlur}
+                                clearTextOnFocus={true}
+                                isPassword={true}
+                                error={errors.password && touchedFields.password && errors.password.message}
+                            />
+                        )}
                     />
 
                     <View style={styles.flexOne} />
@@ -61,11 +95,7 @@ const SignIn = ({
                     <Button
                         onPress={() => { }}
                         title='Have you forgotten your password?'
-                        customTextStyle={{
-                            textAlign: 'center',
-                            fontSize: 19,
-                            fontWeight: '400'
-                        }}
+                        customTextStyle={styles.forgotPasswordText}
                     />
 
                     <Space size={12} />
@@ -73,7 +103,9 @@ const SignIn = ({
                     <Button
                         onPress={_goToSuccessScreen}
                         title='Log in'
-                        primary
+                        mode='contained'
+                        disabled={!isValid}
+                    // {...(isValid ? { primary: true } : { inactive: true })}
                     />
                 </Layout>
             </KeyboardAwareView>
@@ -94,5 +126,10 @@ const styles = StyleSheet.create({
     backgroundImage: {
         width: '100%',
         resizeMode: 'cover',
+    },
+    forgotPasswordText: {
+        textAlign: 'center',
+        fontSize: 19,
+        fontWeight: '400'
     }
 });

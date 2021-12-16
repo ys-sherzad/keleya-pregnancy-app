@@ -68,7 +68,7 @@ const InitialScreen = ({ navigation }: InitialScreenProps) => {
                     testID='get_started'
                     onPress={_goToSignUp}
                     title='Get Started'
-                    primary
+                    mode='contained'
                 />
                 <Button
                     testID='login'
