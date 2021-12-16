@@ -12,16 +12,30 @@ import { StackScreenProps } from '@react-navigation/stack';
 import { RouterStackParamList, Screen } from '../types';
 import Text from '../../shared/Text';
 import KeyboardAwareView from '../../shared/KeyboardAwareView';
+import { useForm, Controller } from 'react-hook-form';
+import { checkboxRoules, emailRules, signUpPasswordRules } from '../../utils/validationRules';
+import BackButton from '../../shared/BackButton';
 
 type SignUpProps = StackScreenProps<RouterStackParamList, Screen.SignUpScreen>;
 
 const SignUp = ({
     navigation
 }: SignUpProps) => {
-    const [email, setEmail] = useState('');
-    const [password, setPassword] = useState('');
-    const [privacyPolicy, setPrivacyPolicy] = useState(false);
-    const [termsAndConditions, setTermsAndConditions] = useState(false);
+
+    const {
+        control,
+        handleSubmit,
+        formState: { errors, isValid, touchedFields }
+
+    } = useForm({
+        mode: 'onChange',
+        defaultValues: {
+            email: '',
+            password: '',
+            privacyPolicy: false,
+            termsAndConditions: false,
+        }
+    });
 
     const _goToNameScreen = () => navigation.push(Screen.NameScreen);
 
@@ -57,35 +71,71 @@ const SignUp = ({
 
                     <Space size={30} />
 
-                    <Input
-                        placeholder='example@gmail.com'
-                        value={email}
-                        onChangeText={(text) => setEmail(text)}
+                    <Controller
+                        {...{ control }}
+                        name='email'
+                        rules={emailRules}
+                        render={({ field: { onChange, value, onBlur } }) => (
+                            <Input
+                                placeholder='example@gmail.com'
+                                value={value}
+                                onChangeText={onChange}
+                                onBlur={onBlur}
+                                autoCapitalize='none'
+                                autoCorrect={false}
+                                keyboardType='email-address'
+                                error={errors.email && touchedFields.email && errors.email?.message}
+                            />
+                        )}
                     />
 
                     <Space size={20} />
 
-                    <Input
-                        placeholder='Enter a password'
-                        value={password}
-                        onChangeText={(text) => setPassword(text)}
-                        isPassword={true}
+                    <Controller
+                        {...{ control }}
+                        name='password'
+                        rules={signUpPasswordRules}
+                        render={({ field: { onChange, value, onBlur } }) => (
+                            <Input
+                                placeholder='Enter a password'
+                                value={value}
+                                onChangeText={onChange}
+                                onBlur={onBlur}
+                                clearTextOnFocus={true}
+                                isPassword={true}
+                                error={errors.password && touchedFields.password && errors.password.message}
+                            />
+                        )}
                     />
 
                     <Space size={22} />
 
-                    <CheckBox
-                        value={privacyPolicy}
-                        description={_renderPrivacyPolicyText()}
-                        onValueChange={() => setPrivacyPolicy(!privacyPolicy)}
+                    <Controller
+                        {...{ control }}
+                        name='privacyPolicy'
+                        rules={checkboxRoules}
+                        render={({ field: { onChange, value } }) => (
+                            <CheckBox
+                                value={value}
+                                description={_renderPrivacyPolicyText()}
+                                onValueChange={() => onChange(!value)}
+                            />
+                        )}
                     />
 
                     <Space size={18} />
 
-                    <CheckBox
-                        value={termsAndConditions}
-                        description={_renderTermsAndConditionsText()}
-                        onValueChange={() => setTermsAndConditions(!termsAndConditions)}
+                    <Controller
+                        {...{ control }}
+                        name='termsAndConditions'
+                        rules={checkboxRoules}
+                        render={({ field: { onChange, value } }) => (
+                            <CheckBox
+                                value={value}
+                                description={_renderTermsAndConditionsText()}
+                                onValueChange={() => onChange(!value)}
+                            />
+                        )}
                     />
 
                     <View style={styles.flexOne} />
@@ -94,8 +144,13 @@ const SignUp = ({
                         onPress={_goToNameScreen}
                         title='Create account'
                         mode='contained'
+                        disabled={!isValid}
                     />
                 </Layout>
+
+                <BackButton
+                    onPress={() => navigation.pop()}
+                />
             </KeyboardAwareView>
         </SafeAreaView>
     );

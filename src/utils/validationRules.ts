@@ -10,10 +10,14 @@ export const signInPasswordRules = {
     required: true,
 };
 
-export const signupPasswordRules = {
+export const signUpPasswordRules = {
     required: true,
     pattern: {
         value: /^(?=.*\d)(?=.*[!@#$%^&*])(?=.*[a-z])(?=.*[A-Z]).{8,}$/,
         message: 'Password must be at least 8 characters containing a number, an uppercase and lowercase letter, and a symbol.'
     },
+};
+
+export const checkboxRoules = {
+    required: true,
 };
