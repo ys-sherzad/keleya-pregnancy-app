@@ -26,7 +26,7 @@ const styles = StyleSheet.create({
     defaultContainer: {
         flex: 1,
         marginTop: -40,
-        paddingHorizontal: 50,
+        paddingHorizontal: 40,
         backgroundColor: theme.white
     }
 });
