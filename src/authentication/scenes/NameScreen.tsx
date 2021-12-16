@@ -1,5 +1,5 @@
 import { StackScreenProps } from '@react-navigation/stack';
-import React, { useState } from 'react';
+import React from 'react';
 import { View, StyleSheet, Image } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import Button from '../../shared/Button';
@@ -15,7 +15,6 @@ import { useForm, Controller } from 'react-hook-form';
 import { nameRules } from '../../utils/validationRules';
 
 type NameScreenProps = StackScreenProps<RouterStackParamList, Screen.DateScreen>;
-
 
 const NameScreen = ({
     navigation
