@@ -12,6 +12,7 @@ import Title from '../components/Title';
 import KeyboardAwareView from '../../shared/KeyboardAwareView';
 import { useForm, Controller } from 'react-hook-form';
 import { emailRules, signInPasswordRules } from '../../utils/validationRules';
+import BackButton from '../../shared/BackButton';
 
 type SignInProps = StackScreenProps<RouterStackParamList, Screen.SignInScreen>;
 
@@ -105,9 +106,12 @@ const SignIn = ({
                         title='Log in'
                         mode='contained'
                         disabled={!isValid}
-                    // {...(isValid ? { primary: true } : { inactive: true })}
                     />
                 </Layout>
+
+                <BackButton
+                    onPress={() => navigation.pop()}
+                />
             </KeyboardAwareView>
         </SafeAreaView>
     );

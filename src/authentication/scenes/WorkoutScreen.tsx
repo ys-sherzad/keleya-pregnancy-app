@@ -9,6 +9,7 @@ import Title from '../components/Title';
 import Space from '../../shared/Space';
 import Button from '../../shared/Button';
 import { Picker } from '@react-native-picker/picker';
+import BackButton from '../../shared/BackButton';
 
 const options = [
     'Once a week',
@@ -73,6 +74,10 @@ const WorkoutScreen = ({
                     right: 0,
                     paddingHorizontal: 50
                 }}
+            />
+
+            <BackButton
+                onPress={() => navigation.pop()}
             />
         </SafeAreaView>
     );

@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { StackScreenProps } from '@react-navigation/stack';
-import { Text, View, StyleSheet, Image } from 'react-native';
+import { View, StyleSheet, Image } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import Button from '../../shared/Button';
 import Space from '../../shared/Space';
@@ -9,6 +9,7 @@ import DatePicker from '../components/DatePicker';
 import Layout from '../components/Layout';
 import Title from '../components/Title';
 import { RouterStackParamList, Screen } from '../types';
+import BackButton from '../../shared/BackButton';
 
 type DateScreenProps = StackScreenProps<RouterStackParamList, Screen.DateScreen>;
 
@@ -45,6 +46,10 @@ const DateScreen = ({
                     mode='contained'
                 />
             </Layout>
+
+            <BackButton
+                onPress={() => navigation.pop()}
+            />
         </SafeAreaView>
     );
 };

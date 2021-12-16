@@ -10,6 +10,7 @@ import Layout from '../components/Layout';
 import Title from '../components/Title';
 import { RouterStackParamList, Screen } from '../types';
 import KeyboardAwareView from '../../shared/KeyboardAwareView';
+import BackButton from '../../shared/BackButton';
 
 type NameScreenProps = StackScreenProps<RouterStackParamList, Screen.DateScreen>;
 
@@ -56,6 +57,10 @@ const NameScreen = ({
                         mode='contained'
                     />
                 </Layout>
+
+                <BackButton
+                    onPress={() => navigation.pop()}
+                />
             </KeyboardAwareView>
         </SafeAreaView>
     );
