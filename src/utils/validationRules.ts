@@ -1,7 +1,10 @@
+const emailRegex = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+const passwordRegex = /^(?=.*\d)(?=.*[!@#$%^&*])(?=.*[a-z])(?=.*[A-Z]).{8,}$/;
+
 export const emailRules = {
     required: true,
     pattern: {
-        value: /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/,
+        value: emailRegex,
         message: 'Please enter a valid email address.'
     }
 };
@@ -13,8 +16,8 @@ export const signInPasswordRules = {
 export const signUpPasswordRules = {
     required: true,
     pattern: {
-        value: /^(?=.*\d)(?=.*[!@#$%^&*])(?=.*[a-z])(?=.*[A-Z]).{8,}$/,
-        message: 'Password must be at least 8 characters containing a number, an uppercase and lowercase letter, and a symbol.'
+        value: passwordRegex,
+        message: 'Password must be at least 8 characters containing a number, a symbol, an uppercase, and lowercase letter'
     },
 };
 
