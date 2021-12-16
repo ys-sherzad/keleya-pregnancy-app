@@ -1,15 +1,20 @@
 import * as React from 'react';
-import { Text, View, StyleSheet } from 'react-native';
+import { View, StyleSheet } from 'react-native';
+import { theme } from '../../utils/theme';
 
-interface LayoutProps {
-    children: React.ReactNode;
-}
+type LayoutProps = React.ComponentProps<typeof View>;
 
 const Layout = ({
-    children
+    children,
+    style,
+    ...rest
 }: LayoutProps) => {
+
     return (
-        <View style={styles.container}>
+        <View
+            style={[styles.defaultContainer, style]}
+            {...rest}
+        >
             {children}
         </View>
     );
@@ -18,9 +23,10 @@ const Layout = ({
 export default Layout;
 
 const styles = StyleSheet.create({
-    container: {
+    defaultContainer: {
         flex: 1,
         marginTop: -40,
         paddingHorizontal: 50,
+        backgroundColor: theme.white
     }
 });
