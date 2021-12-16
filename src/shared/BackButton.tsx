@@ -11,12 +11,13 @@ const BackButton = ({
     style,
     ...rest
 }: BackButtonProps) => {
+
     return (
         <TouchableOpacity
             style={[styles.defaultStyle, style]}
             {...rest}
         >
-            <LeftArrow height={22} width={22} fill={theme.greyish_brown} />
+            <LeftArrow height={20} width={20} fill={theme.greyish_brown} />
         </TouchableOpacity>
     );
 };
