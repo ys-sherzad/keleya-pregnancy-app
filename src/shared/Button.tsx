@@ -54,7 +54,7 @@ const styles = StyleSheet.create({
         borderRadius: 8,
     },
     defaultTitleStyle: {
-        fontSize: 24,
+        fontSize: 26,
         fontWeight: '600'
     },
 
