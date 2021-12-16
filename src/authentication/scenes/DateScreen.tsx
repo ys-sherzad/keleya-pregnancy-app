@@ -14,8 +14,11 @@ import BackButton from '../../shared/BackButton';
 type DateScreenProps = StackScreenProps<RouterStackParamList, Screen.DateScreen>;
 
 const DateScreen = ({
+    route,
     navigation
 }: DateScreenProps) => {
+
+    const { name } = route.params;
 
     const _goToWorkoutScreen = () => navigation.push(Screen.WorkoutScreen);
 
@@ -31,7 +34,7 @@ const DateScreen = ({
             />
             <Layout>
                 <Title
-                    title={`When is your baby due, Sam?`}
+                    title={`When is your baby due, ${name}?`}
                 />
 
                 <Space size={30} />

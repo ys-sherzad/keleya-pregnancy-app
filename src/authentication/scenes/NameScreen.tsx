@@ -8,18 +8,33 @@ import { theme } from '../../utils/theme';
 import Input from '../components/Input';
 import Layout from '../components/Layout';
 import Title from '../components/Title';
-import { RouterStackParamList, Screen } from '../types';
+import { NameScreenFormData, RouterStackParamList, Screen } from '../types';
 import KeyboardAwareView from '../../shared/KeyboardAwareView';
 import BackButton from '../../shared/BackButton';
+import { useForm, Controller } from 'react-hook-form';
+import { nameRules } from '../../utils/validationRules';
 
 type NameScreenProps = StackScreenProps<RouterStackParamList, Screen.DateScreen>;
+
 
 const NameScreen = ({
     navigation
 }: NameScreenProps) => {
-    const [name, setName] = useState('');
+    const {
+        control,
+        handleSubmit,
+        formState: { errors, isValid, touchedFields }
 
-    const _goToDateScreen = () => navigation.push(Screen.DateScreen);
+    } = useForm<NameScreenFormData>({
+        mode: 'onChange',
+        defaultValues: {
+            name: ''
+        }
+    });
+
+    const _continue = (data: NameScreenFormData) => {
+        navigation.push(Screen.DateScreen, data);
+    };
 
     return (
         <SafeAreaView
@@ -39,22 +54,31 @@ const NameScreen = ({
 
                     <Space size={30} />
 
-                    <Input
-                        value={name}
-                        placeholder='Your Name'
-                        testID='name_input'
-                        onChangeText={(text) => setName(text)}
-                        customInputStyle={{
-                            textAlign: 'center'
-                        }}
+                    <Controller
+                        {...{ control }}
+                        name='name'
+                        rules={nameRules}
+                        render={({ field: { onChange, value } }) => (
+                            <Input
+                                value={value}
+                                placeholder='Your Name'
+                                testID='name_input'
+                                onChangeText={onChange}
+                                customInputStyle={{
+                                    textAlign: 'center'
+                                }}
+                                error={errors.name && touchedFields.name && errors.name.message}
+                            />
+                        )}
                     />
 
                     <View style={styles.flexOne} />
 
                     <Button
-                        onPress={_goToDateScreen}
+                        onPress={handleSubmit(_continue)}
                         title='Continue'
                         mode='contained'
+                        disabled={!isValid}
                     />
                 </Layout>
 

@@ -17,10 +17,19 @@ export const signUpPasswordRules = {
     required: true,
     pattern: {
         value: passwordRegex,
-        message: 'Password must be at least 8 characters containing a number, a symbol, an uppercase, and lowercase letter'
+        message: 'Password must be at least 8 characters containing a number, a symbol, an uppercase, and a lowercase letter.'
     },
 };
 
 export const checkboxRoules = {
     required: true,
+};
+
+export const nameRules = {
+    required: true,
+    minLength: 2,
+    maxLength: {
+        value: 15,
+        message: 'Name cannot be more than 15 characters.'
+    },
 };

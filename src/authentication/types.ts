@@ -8,12 +8,17 @@ export enum Screen {
     SuccessScreen = 'SuccessScreen',
 };
 
+export type NameScreenFormData = {
+    name: string;
+};
+
 export type RouterStackParamList = {
     InitialScreen: undefined;
     SignUpScreen: undefined;
     SignInScreen: undefined;
     NameScreen: undefined;
-    DateScreen: undefined;
+    DateScreen: NameScreenFormData;
     WorkoutScreen: undefined;
     SuccessScreen: undefined;
 };
+
