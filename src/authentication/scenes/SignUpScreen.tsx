@@ -7,7 +7,7 @@ import Input from '../components/Input';
 import Space from '../../shared/Space';
 import CheckBox from '../components/CheckBox';
 import Button from '../../shared/Button';
-import Layout from '../components/Layout';
+import ContentLayout from '../components/ContentLayout';
 import { StackScreenProps } from '@react-navigation/stack';
 import { RouterStackParamList, Screen } from '../types';
 import Text from '../../shared/Text';
@@ -67,7 +67,7 @@ const SignUp = ({
                     style={styles.backgroundImage}
                 />
 
-                <Layout>
+                <ContentLayout>
                     <Title
                         title={`Add your details below to set up and account`}
                     />
@@ -153,7 +153,7 @@ const SignUp = ({
                         mode='contained'
                         disabled={!isValid}
                     />
-                </Layout>
+                </ContentLayout>
 
                 <BackButton
                     onPress={() => navigation.pop()}

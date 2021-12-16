@@ -7,7 +7,7 @@ import Button from '../../shared/Button';
 import Space from '../../shared/Space';
 import { theme } from '../../utils/theme';
 import Input from '../components/Input';
-import Layout from '../components/Layout';
+import ContentLayout from '../components/ContentLayout';
 import Title from '../components/Title';
 import KeyboardAwareView from '../../shared/KeyboardAwareView';
 import { useForm, Controller } from 'react-hook-form';
@@ -50,7 +50,7 @@ const SignIn = ({
                     style={styles.backgroundImage}
                 />
 
-                <Layout>
+                <ContentLayout>
                     <Title
                         title={`Welcome back!`}
                     />
@@ -114,7 +114,7 @@ const SignIn = ({
                         mode='contained'
                         disabled={!isValid}
                     />
-                </Layout>
+                </ContentLayout>
 
                 <BackButton
                     onPress={() => navigation.pop()}

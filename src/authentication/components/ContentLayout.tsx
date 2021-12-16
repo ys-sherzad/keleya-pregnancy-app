@@ -2,13 +2,13 @@ import * as React from 'react';
 import { View, StyleSheet } from 'react-native';
 import { theme } from '../../utils/theme';
 
-type LayoutProps = React.ComponentProps<typeof View>;
+type ContentLayoutProps = React.ComponentProps<typeof View>;
 
-const Layout = ({
+const ContentLayout = ({
     children,
     style,
     ...rest
-}: LayoutProps) => {
+}: ContentLayoutProps) => {
 
     return (
         <View
@@ -20,7 +20,7 @@ const Layout = ({
     );
 };
 
-export default Layout;
+export default ContentLayout;
 
 const styles = StyleSheet.create({
     defaultContainer: {

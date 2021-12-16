@@ -4,7 +4,7 @@ import { View, StyleSheet, Image } from 'react-native';
 import { RouterStackParamList, Screen } from '../types';
 import { theme } from '../../utils/theme';
 import { SafeAreaView } from 'react-native-safe-area-context';
-import Layout from '../components/Layout';
+import ContentLayout from '../components/ContentLayout';
 import Title from '../components/Title';
 import Space from '../../shared/Space';
 import Button from '../../shared/Button';
@@ -42,7 +42,7 @@ const WorkoutScreen = ({
                 style={styles.backgroundImage}
             />
 
-            <Layout>
+            <ContentLayout>
 
                 <Space size={25} />
 
@@ -63,7 +63,7 @@ const WorkoutScreen = ({
                     title='Continue'
                     mode='contained'
                 />
-            </Layout>
+            </ContentLayout>
 
             <Title
                 title={`How many times a week do you want to be active?`}

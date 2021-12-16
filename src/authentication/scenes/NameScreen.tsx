@@ -6,7 +6,7 @@ import Button from '../../shared/Button';
 import Space from '../../shared/Space';
 import { theme } from '../../utils/theme';
 import Input from '../components/Input';
-import Layout from '../components/Layout';
+import ContentLayout from '../components/ContentLayout';
 import Title from '../components/Title';
 import { NameScreenFormData, RouterStackParamList, Screen } from '../types';
 import KeyboardAwareView from '../../shared/KeyboardAwareView';
@@ -53,7 +53,7 @@ const NameScreen = ({
                     style={styles.backgroundImage}
                 />
 
-                <Layout style={styles.content}>
+                <ContentLayout style={styles.content}>
 
                     <LinearGradient
                         colors={gradientColors}
@@ -96,7 +96,7 @@ const NameScreen = ({
                         mode='contained'
                         disabled={!isValid}
                     />
-                </Layout>
+                </ContentLayout>
 
                 <BackButton
                     onPress={() => navigation.pop()}

@@ -6,7 +6,7 @@ import Button from '../../shared/Button';
 import Space from '../../shared/Space';
 import { theme } from '../../utils/theme';
 import DatePicker from '../components/DatePicker';
-import Layout from '../components/Layout';
+import ContentLayout from '../components/ContentLayout';
 import Title from '../components/Title';
 import { RouterStackParamList, Screen } from '../types';
 import BackButton from '../../shared/BackButton';
@@ -32,7 +32,7 @@ const DateScreen = ({
                 source={require('../../../assets/images/due-date-background-image.jpg')}
                 style={styles.backgroundImage}
             />
-            <Layout>
+            <ContentLayout>
                 <Title
                     title={`When is your baby due, ${name}?`}
                 />
@@ -48,7 +48,7 @@ const DateScreen = ({
                     title='Continue'
                     mode='contained'
                 />
-            </Layout>
+            </ContentLayout>
 
             <BackButton
                 onPress={() => navigation.pop()}
