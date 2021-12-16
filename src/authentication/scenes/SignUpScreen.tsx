@@ -72,7 +72,7 @@ const SignUp = ({
                         title={`Add your details below to set up and account`}
                     />
 
-                    <Space size={30} />
+                    <Space size={25} />
 
                     <Controller
                         {...{ control }}

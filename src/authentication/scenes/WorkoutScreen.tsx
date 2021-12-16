@@ -44,7 +44,7 @@ const WorkoutScreen = ({
 
             <Layout>
 
-                <Space size={30} />
+                <Space size={25} />
 
                 <Picker
                     selectedValue={selectedFrequency}

@@ -37,7 +37,7 @@ const DateScreen = ({
                     title={`When is your baby due, ${name}?`}
                 />
 
-                <Space size={30} />
+                <Space size={40} />
 
                 <DatePicker />
 

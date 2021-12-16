@@ -55,7 +55,7 @@ const SignIn = ({
                         title={`Welcome back!`}
                     />
 
-                    <Space size={30} />
+                    <Space size={25} />
 
                     <Controller
                         {...{ control }}
