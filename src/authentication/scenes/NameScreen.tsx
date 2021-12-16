@@ -13,6 +13,9 @@ import KeyboardAwareView from '../../shared/KeyboardAwareView';
 import BackButton from '../../shared/BackButton';
 import { useForm, Controller } from 'react-hook-form';
 import { nameRules } from '../../utils/validationRules';
+import LinearGradient from 'react-native-linear-gradient';
+
+const gradientColors = ["#ffffff00", "rgb(255, 255, 255)", "rgb(255, 255, 255)"];
 
 type NameScreenProps = StackScreenProps<RouterStackParamList, Screen.DateScreen>;
 
@@ -22,8 +25,11 @@ const NameScreen = ({
     const {
         control,
         handleSubmit,
-        formState: { errors, isValid, touchedFields }
-
+        formState: {
+            errors,
+            isValid,
+            touchedFields
+        }
     } = useForm<NameScreenFormData>({
         mode: 'onChange',
         defaultValues: {
@@ -43,15 +49,22 @@ const NameScreen = ({
         >
             <KeyboardAwareView>
                 <Image
-                    source={require('../../../assets/images/due-date-background-image.jpg')}
+                    source={require('../../../assets/images/couch_smile.jpg')}
                     style={styles.backgroundImage}
                 />
-                <Layout>
+
+                <Layout style={styles.content}>
+
+                    <LinearGradient
+                        colors={gradientColors}
+                        style={styles.shadowBox}
+                    />
+
                     <Title
                         title={`It's great that you're here! First things first, what should we call you?`}
                     />
 
-                    <Space size={30} />
+                    <Space size={25} />
 
                     <Controller
                         {...{ control }}
@@ -66,7 +79,11 @@ const NameScreen = ({
                                 customInputStyle={{
                                     textAlign: 'center'
                                 }}
-                                error={errors.name && touchedFields.name && errors.name.message}
+                                error={
+                                    errors.name
+                                    && touchedFields.name
+                                    && errors.name.message
+                                }
                             />
                         )}
                     />
@@ -102,5 +119,16 @@ const styles = StyleSheet.create({
     backgroundImage: {
         width: '100%',
         resizeMode: 'cover',
+        marginTop: -170,
+    },
+    content: {
+        marginTop: -140,
+    },
+    shadowBox: {
+        height: 40,
+        position: 'absolute',
+        top: -40,
+        left: 0,
+        right: 0,
     }
 });
