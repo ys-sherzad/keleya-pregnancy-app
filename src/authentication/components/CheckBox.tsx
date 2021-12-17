@@ -3,17 +3,22 @@ import { View, StyleSheet, TouchableOpacity } from 'react-native';
 import Space from '../../shared/Space';
 import CheckIcon from '../../../assets/icons/check.svg';
 import { theme } from '../../utils/theme';
+import { moderateScale, scale } from '../../utils/scale';
+
+const CHECKBOX_SIZE = moderateScale(17);
 
 interface CheckBoxProps {
     value: boolean;
     description: React.ReactNode;
     onValueChange: () => void;
+    size?: number;
 }
 
 const CheckBox = ({
     value,
     description,
     onValueChange,
+    size = CHECKBOX_SIZE
 }: CheckBoxProps) => {
     return (
         <TouchableOpacity
@@ -21,12 +26,12 @@ const CheckBox = ({
             style={styles.container}
         >
             <View
-                style={[styles.checkbox, { borderColor: theme.pale_teal }]}
+                style={[styles.checkbox, { width: size, height: size }]}
             >
                 {value && (<CheckIcon height='100%' width='100%' stroke={theme.greyish_brown} />)}
             </View>
 
-            <Space size={12} horizontal />
+            <Space size={scale(10)} horizontal />
             {description}
         </TouchableOpacity>
     );
@@ -39,10 +44,9 @@ const styles = StyleSheet.create({
         flexDirection: 'row',
     },
     checkbox: {
-        width: 18,
-        height: 18,
         borderWidth: 1,
         borderRadius: 4,
         padding: 1,
+        borderColor: theme.pale_teal
     }
 });

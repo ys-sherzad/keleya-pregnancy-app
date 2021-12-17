@@ -1,7 +1,7 @@
 import React from 'react';
+import { View, StyleSheet, Image, Dimensions } from 'react-native';
 import { StackScreenProps } from '@react-navigation/stack';
 import { RouterStackParamList, Screen } from '../types';
-import { View, StyleSheet, Image } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import Button from '../../shared/Button';
 import Space from '../../shared/Space';
@@ -13,8 +13,11 @@ import KeyboardAwareView from '../../shared/KeyboardAwareView';
 import { useForm, Controller } from 'react-hook-form';
 import { emailRules, signInPasswordRules } from '../../utils/validationRules';
 import BackButton from '../../shared/BackButton';
+import { moderateScale, verticalScale } from '../../utils/scale';
 
 type SignInProps = StackScreenProps<RouterStackParamList, Screen.SignInScreen>;
+
+const { height, width } = Dimensions.get('window');
 
 const SignIn = ({
     navigation
@@ -50,12 +53,16 @@ const SignIn = ({
                     style={styles.backgroundImage}
                 />
 
-                <ContentLayout>
+                <ContentLayout
+                    style={{
+                        marginTop: -40
+                    }}
+                >
                     <Title
                         title={`Welcome back!`}
                     />
 
-                    <Space size={25} />
+                    <Space size={18} />
 
                     <Controller
                         {...{ control }}
@@ -75,7 +82,7 @@ const SignIn = ({
                         )}
                     />
 
-                    <Space size={26} />
+                    <Space size={15} />
 
                     <Controller
                         {...{ control }}
@@ -106,7 +113,7 @@ const SignIn = ({
                         customTextStyle={styles.forgotPasswordText}
                     />
 
-                    <Space size={12} />
+                    <Space size={10} />
 
                     <Button
                         onPress={_goToSuccessScreen}
@@ -136,11 +143,13 @@ const styles = StyleSheet.create({
     },
     backgroundImage: {
         width: '100%',
+        height: height * .5,
         resizeMode: 'cover',
+        overflow: 'visible'
     },
     forgotPasswordText: {
         textAlign: 'center',
-        fontSize: 19,
+        fontSize: moderateScale(18),
         fontWeight: '400'
     }
 });

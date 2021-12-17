@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { StackScreenProps } from '@react-navigation/stack';
-import { View, StyleSheet, Image } from 'react-native';
+import { View, StyleSheet, Image, Dimensions, useWindowDimensions } from 'react-native';
 import { RouterStackParamList, Screen } from '../types';
 import { theme } from '../../utils/theme';
 import { SafeAreaView } from 'react-native-safe-area-context';
@@ -8,10 +8,14 @@ import Title from '../components/Title';
 import Space from '../../shared/Space';
 import Button from '../../shared/Button';
 import Bell from '../../../assets/icons/bell.svg';
+import { moderateScale } from '../../utils/scale';
+
+const { height } = Dimensions.get('window');
 
 type SuccessScreenProps = StackScreenProps<RouterStackParamList, Screen.SuccessScreen>;
 
 const SuccessScreen = ({ }: SuccessScreenProps) => {
+
     return (
         <SafeAreaView
             edges={['left', 'right', 'bottom']}
@@ -24,7 +28,7 @@ const SuccessScreen = ({ }: SuccessScreenProps) => {
             />
 
             <View style={styles.topSection}>
-                <Bell height={50} width={50} fill={theme.greyish_brown} />
+                <Bell height={moderateScale(50)} width={moderateScale(50)} fill={theme.greyish_brown} />
 
                 <Space size={20} />
 
@@ -39,7 +43,7 @@ const SuccessScreen = ({ }: SuccessScreenProps) => {
                     onPress={() => { }}
                     title='Skip'
                     customTextStyle={{
-                        fontSize: 19,
+                        fontSize: moderateScale(19),
                     }}
                 />
 
@@ -67,19 +71,20 @@ const styles = StyleSheet.create({
     },
     backgroundImage: {
         width: '100%',
+        height: height,
         resizeMode: 'cover',
     },
     topSection: {
         position: 'absolute',
         top: 90,
         width: '100%',
-        paddingHorizontal: 50,
+        paddingHorizontal: moderateScale(40),
         alignItems: 'center'
     },
     bottomSection: {
         position: 'absolute',
         bottom: 35,
         width: '100%',
-        paddingHorizontal: 50,
+        paddingHorizontal: moderateScale(40),
     }
 });

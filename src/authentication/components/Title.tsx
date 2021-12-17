@@ -1,6 +1,7 @@
 import * as React from 'react';
 import { StyleSheet, StyleProp, TextStyle } from 'react-native';
 import Text from '../../shared/Text';
+import { moderateScale } from '../../utils/scale';
 import { theme } from '../../utils/theme';
 
 interface TitleProps {
@@ -21,9 +22,9 @@ export default Title;
 
 const styles = StyleSheet.create({
     title: {
-        fontSize: 24,
+        fontSize: moderateScale(20),
         color: theme.greyish_brown,
         textAlign: 'center',
-        paddingHorizontal: 5
+        paddingHorizontal: moderateScale(5)
     }
 });

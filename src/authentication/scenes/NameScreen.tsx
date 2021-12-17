@@ -1,6 +1,6 @@
 import { StackScreenProps } from '@react-navigation/stack';
-import React from 'react';
-import { View, StyleSheet, Image } from 'react-native';
+import React, { version } from 'react';
+import { View, StyleSheet, Image, Dimensions } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import Button from '../../shared/Button';
 import Space from '../../shared/Space';
@@ -14,6 +14,9 @@ import BackButton from '../../shared/BackButton';
 import { useForm, Controller } from 'react-hook-form';
 import { nameRules } from '../../utils/validationRules';
 import LinearGradient from 'react-native-linear-gradient';
+import { moderateScale, verticalScale } from '../../utils/scale';
+
+const { height } = Dimensions.get('window');
 
 const gradientColors = ["#ffffff00", "rgb(255, 255, 255)", "rgb(255, 255, 255)"];
 
@@ -48,12 +51,19 @@ const NameScreen = ({
             style={styles.container}
         >
             <KeyboardAwareView>
-                <Image
-                    source={require('../../../assets/images/couch_smile.jpg')}
-                    style={styles.backgroundImage}
-                />
 
-                <ContentLayout style={styles.content}>
+                <View style={{
+                    height: '100%',
+                    width: '100%',
+                    marginTop: -140
+                }}>
+                    <Image
+                        source={require('../../../assets/images/couch_smile.jpg')}
+                        style={styles.backgroundImage}
+                    />
+                </View>
+
+                <ContentLayout style={[styles.content, { backgroundColor: theme.white }]}>
 
                     <LinearGradient
                         colors={gradientColors}
@@ -64,7 +74,7 @@ const NameScreen = ({
                         title={`It's great that you're here! First things first, what should we call you?`}
                     />
 
-                    <Space size={25} />
+                    <Space size={18} />
 
                     <Controller
                         {...{ control }}
@@ -117,15 +127,16 @@ const styles = StyleSheet.create({
         backgroundColor: theme.white,
     },
     backgroundImage: {
-        width: '100%',
+        flex: 1,
+        height: undefined,
+        width: undefined,
         resizeMode: 'cover',
-        marginTop: -170,
     },
     content: {
-        marginTop: -140,
+        marginTop: moderateScale(-120)
     },
     shadowBox: {
-        height: 40,
+        height: verticalScale(30),
         position: 'absolute',
         top: -40,
         left: 0,

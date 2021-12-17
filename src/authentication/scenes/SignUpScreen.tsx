@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { View, StyleSheet, Image } from 'react-native';
+import { View, StyleSheet, Image, Dimensions } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { theme } from '../../utils/theme';
 import Title from '../components/Title';
@@ -15,6 +15,9 @@ import KeyboardAwareView from '../../shared/KeyboardAwareView';
 import { useForm, Controller } from 'react-hook-form';
 import { checkboxRoules, emailRules, signUpPasswordRules } from '../../utils/validationRules';
 import BackButton from '../../shared/BackButton';
+import { moderateScale, verticalScale } from '../../utils/scale';
+
+const { height } = Dimensions.get('window');
 
 type SignUpProps = StackScreenProps<RouterStackParamList, Screen.SignUpScreen>;
 
@@ -51,7 +54,7 @@ const SignUp = ({
 
     const _renderTermsAndConditionsText = () => (
         <Text style={styles.checkboxText}>
-            I accept <Text style={{ fontWeight: '700' }}>the terms & conditions</Text> and <Text style={{ fontWeight: '700' }}>Keleya's advice</Text>
+            I accept the <Text style={{ fontWeight: '700' }}>terms & conditions</Text> and <Text style={{ fontWeight: '700' }}>Keleya's advice</Text>
         </Text>
     );
 
@@ -62,17 +65,22 @@ const SignUp = ({
             style={styles.container}
         >
             <KeyboardAwareView>
+
                 <Image
                     source={require('../../../assets/images/authentication-background-image.jpg')}
                     style={styles.backgroundImage}
                 />
 
-                <ContentLayout>
+                <ContentLayout
+                    style={{
+                        marginTop: -45,
+                    }}
+                >
                     <Title
                         title={`Add your details below to set up and account`}
                     />
 
-                    <Space size={25} />
+                    <Space size={18} />
 
                     <Controller
                         {...{ control }}
@@ -92,7 +100,7 @@ const SignUp = ({
                         )}
                     />
 
-                    <Space size={20} />
+                    <Space size={15} />
 
                     <Controller
                         {...{ control }}
@@ -115,7 +123,7 @@ const SignUp = ({
                         )}
                     />
 
-                    <Space size={22} />
+                    <Space size={verticalScale(18)} />
 
                     <Controller
                         {...{ control }}
@@ -130,7 +138,7 @@ const SignUp = ({
                         )}
                     />
 
-                    <Space size={18} />
+                    <Space size={15} />
 
                     <Controller
                         {...{ control }}
@@ -175,11 +183,14 @@ const styles = StyleSheet.create({
     },
     backgroundImage: {
         width: '100%',
+        height: height * .5,
         resizeMode: 'cover',
+        overflow: 'visible',
+
     },
     checkboxText: {
         flex: 1,
-        fontSize: 14,
+        fontSize: moderateScale(13),
         fontWeight: '500',
     }
 });

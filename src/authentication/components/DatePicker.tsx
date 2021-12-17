@@ -1,11 +1,8 @@
-import React, { useState } from 'react';
-import { Text, View, StyleSheet } from 'react-native';
+import React from 'react';
+import { View, StyleSheet } from 'react-native';
 import DateTimePicker from '@react-native-community/datetimepicker';
-import { theme } from '../../utils/theme';
 
-interface DatePickerProps { }
-
-const DatePicker = (props: DatePickerProps) => {
+const DatePicker = () => {
     return (
         <View style={styles.container}>
             <DateTimePicker

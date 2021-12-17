@@ -1,6 +1,6 @@
 import * as React from 'react';
+import { View, StyleSheet, Image, Dimensions } from 'react-native';
 import { StackScreenProps } from '@react-navigation/stack';
-import { View, StyleSheet, Image } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import Button from '../../shared/Button';
 import Space from '../../shared/Space';
@@ -10,6 +10,9 @@ import ContentLayout from '../components/ContentLayout';
 import Title from '../components/Title';
 import { RouterStackParamList, Screen } from '../types';
 import BackButton from '../../shared/BackButton';
+import { verticalScale } from '../../utils/scale';
+
+const { height } = Dimensions.get('window');
 
 type DateScreenProps = StackScreenProps<RouterStackParamList, Screen.DateScreen>;
 
@@ -32,12 +35,14 @@ const DateScreen = ({
                 source={require('../../../assets/images/due-date-background-image.jpg')}
                 style={styles.backgroundImage}
             />
-            <ContentLayout>
+            <ContentLayout style={{
+                marginTop: -45,
+            }}>
                 <Title
                     title={`When is your baby due, ${name}?`}
                 />
 
-                <Space size={40} />
+                <Space size={30} />
 
                 <DatePicker />
 
@@ -68,6 +73,7 @@ const styles = StyleSheet.create({
         backgroundColor: theme.white,
     },
     backgroundImage: {
+        height: height * .65,
         width: '100%',
         resizeMode: 'cover',
     }

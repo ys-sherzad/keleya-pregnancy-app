@@ -5,6 +5,9 @@ import EyeOn from '../../../assets/icons/eye-on.svg';
 import EyeOff from '../../../assets/icons/eye-off.svg';
 import { TouchableOpacity } from 'react-native-gesture-handler';
 import Space from '../../shared/Space';
+import { moderateScale, scale, verticalScale } from '../../utils/scale';
+
+const EYE_ICON_SIZE = moderateScale(20);
 
 type InputProps = React.ComponentProps<typeof TextInput> & {
   isPassword?: boolean;
@@ -43,8 +46,8 @@ const Input = ({
           <>
             <TouchableOpacity onPress={() => setIsTextSecure(isTextSecure => !isTextSecure)}>
               {isTextSecure
-                ? (<EyeOn height={20} width={20} fill={theme.greyish_brown} />)
-                : (<EyeOff height={20} width={20} fill={theme.greyish_brown} />)
+                ? (<EyeOn height={EYE_ICON_SIZE} width={EYE_ICON_SIZE} fill={theme.greyish_brown} />)
+                : (<EyeOff height={EYE_ICON_SIZE} width={EYE_ICON_SIZE} fill={theme.greyish_brown} />)
               }
             </TouchableOpacity>
 
@@ -72,12 +75,12 @@ const styles = StyleSheet.create({
   container: {
     flexDirection: 'row',
     alignItems: 'center',
-    paddingVertical: 10,
+    paddingVertical: verticalScale(8),
   },
   defaultInputStyle: {
     flex: 1,
-    paddingHorizontal: 20,
-    fontSize: 19,
+    paddingHorizontal: scale(18),
+    fontSize: moderateScale(17),
     fontFamily: 'Raleway',
     fontWeight: '500',
     color: theme.greyish_brown,
@@ -87,10 +90,10 @@ const styles = StyleSheet.create({
     backgroundColor: theme.greyish_brown
   },
   errorContainer: {
-    paddingTop: 5
+    paddingTop: moderateScale(5),
   },
   errorText: {
-    fontSize: 11,
+    fontSize: moderateScale(10),
     color: theme.red,
   }
 });

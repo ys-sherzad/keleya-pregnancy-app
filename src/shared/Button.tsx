@@ -1,5 +1,6 @@
 import * as React from 'react';
 import { StyleSheet, TouchableOpacity, StyleProp, TextStyle } from 'react-native';
+import { moderateScale, verticalScale } from '../utils/scale';
 import { theme } from '../utils/theme';
 import Text from './Text';
 
@@ -47,15 +48,15 @@ export default Button;
 
 const styles = StyleSheet.create({
     defaultBtnStyle: {
-        height: 57,
+        height: verticalScale(40),
         width: '100%',
         justifyContent: 'center',
         alignItems: 'center',
         borderRadius: 8,
     },
     defaultTitleStyle: {
-        fontSize: 26,
-        fontWeight: '600'
+        fontSize: moderateScale(23),
+        fontWeight: '500'
     },
 
 });

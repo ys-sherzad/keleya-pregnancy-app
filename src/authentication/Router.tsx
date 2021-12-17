@@ -13,7 +13,6 @@ import SuccessScreen from './scenes/SuccessScreen';
 import { RouterStackParamList, Screen } from './types';
 import DateScreen from './scenes/DateScreen';
 
-
 const Stack = createStackNavigator<RouterStackParamList>();
 
 const Router = () => {

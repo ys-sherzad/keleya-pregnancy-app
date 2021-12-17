@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
+import { View, StyleSheet, Image, Dimensions } from 'react-native';
 import { StackScreenProps } from '@react-navigation/stack';
-import { View, StyleSheet, Image } from 'react-native';
 import { RouterStackParamList, Screen } from '../types';
 import { theme } from '../../utils/theme';
 import { SafeAreaView } from 'react-native-safe-area-context';
@@ -10,6 +10,9 @@ import Space from '../../shared/Space';
 import Button from '../../shared/Button';
 import { Picker } from '@react-native-picker/picker';
 import BackButton from '../../shared/BackButton';
+import { moderateScale, scale, verticalScale } from '../../utils/scale';
+
+const { height } = Dimensions.get('window');
 
 const options = [
     'Once a week',
@@ -42,9 +45,11 @@ const WorkoutScreen = ({
                 style={styles.backgroundImage}
             />
 
-            <ContentLayout>
+            <ContentLayout style={{
+                marginTop: -40,
+            }}>
 
-                <Space size={25} />
+                <Space size={verticalScale(25)} />
 
                 <Picker
                     selectedValue={selectedFrequency}
@@ -72,7 +77,7 @@ const WorkoutScreen = ({
                     top: 100,
                     left: 0,
                     right: 0,
-                    paddingHorizontal: 50
+                    paddingHorizontal: moderateScale(45)
                 }}
             />
 
@@ -95,6 +100,7 @@ const styles = StyleSheet.create({
     },
     backgroundImage: {
         width: '100%',
+        height: height * .65,
         resizeMode: 'cover',
     },
     pickerItemStyle: {

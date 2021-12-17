@@ -6,6 +6,7 @@ import Space from '../../shared/Space';
 import { theme } from '../../utils/theme';
 import { RouterStackParamList, Screen } from '../types';
 import { StackScreenProps } from '@react-navigation/stack';
+import { moderateScale, scale, verticalScale } from '../../utils/scale';
 
 const { height, width } = Dimensions.get('window');
 
@@ -110,31 +111,31 @@ const styles = StyleSheet.create({
         zIndex: 1,
     },
     logo: {
-        height: 120,
-        width: 120,
+        height: moderateScale(110),
+        width: moderateScale(110),
         resizeMode: 'contain'
     },
     description: {
         textAlign: 'center',
-        fontSize: 23,
-        fontWeight: '600',
+        fontSize: moderateScale(23),
+        fontWeight: '500',
         color: theme.greyish_brown
     },
     bottomSectionContainer: {
         position: 'absolute',
         bottom: 20,
-        height: '18%',
-        width: '85%',
+        height: verticalScale(120),
+        width: '84%',
         alignItems: 'center',
         alignSelf: 'center',
-        paddingHorizontal: 10,
+        paddingHorizontal: moderateScale(8),
         paddingBottom: 20,
         justifyContent: 'space-around',
     },
     dot: {
-        height: 10,
-        width: 10,
-        borderRadius: 10 / 2,
+        height: moderateScale(10),
+        width: moderateScale(10),
+        borderRadius: 99,
         backgroundColor: theme.pale_teal,
         marginHorizontal: 3
     }

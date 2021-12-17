@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { View, StyleSheet } from 'react-native';
-import { theme } from '../../utils/theme';
+import { moderateScale } from '../../utils/scale';
 
 type ContentLayoutProps = React.ComponentProps<typeof View>;
 
@@ -25,8 +25,6 @@ export default ContentLayout;
 const styles = StyleSheet.create({
     defaultContainer: {
         flex: 1,
-        marginTop: -40,
-        paddingHorizontal: 40,
-        backgroundColor: theme.white
+        paddingHorizontal: moderateScale(32),
     }
 });
