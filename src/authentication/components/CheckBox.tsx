@@ -3,7 +3,7 @@ import { View, StyleSheet, TouchableOpacity } from 'react-native';
 import Space from '../../shared/Space';
 import CheckIcon from '../../../assets/icons/check.svg';
 import { theme } from '../../utils/theme';
-import { moderateScale, scale } from '../../utils/scale';
+import { moderateScale } from '../../utils/scale';
 
 const CHECKBOX_SIZE = moderateScale(17);
 
