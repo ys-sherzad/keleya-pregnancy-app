@@ -112,7 +112,6 @@ const SignUp = ({
                                 value={value}
                                 onChangeText={onChange}
                                 onBlur={onBlur}
-                                clearTextOnFocus={true}
                                 isPassword={true}
                                 error={
                                     errors.password
