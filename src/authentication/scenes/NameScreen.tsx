@@ -15,6 +15,7 @@ import { useForm, Controller } from 'react-hook-form';
 import { nameRules } from '../../utils/validationRules';
 import LinearGradient from 'react-native-linear-gradient';
 import { moderateScale, verticalScale } from '../../utils/scale';
+import { SCR_HEIGHT, SCR_WIDTH } from '../../utils/Dimensions';
 
 const { height } = Dimensions.get('window');
 
@@ -53,9 +54,9 @@ const NameScreen = ({
             <KeyboardAwareView>
 
                 <View style={{
-                    height: '100%',
-                    width: '100%',
-                    marginTop: -140
+                    height: SCR_HEIGHT,
+                    width: SCR_WIDTH,
+                    marginTop: moderateScale(-140)
                 }}>
                     <Image
                         source={require('../../../assets/images/couch_smile.jpg')}
@@ -63,7 +64,10 @@ const NameScreen = ({
                     />
                 </View>
 
-                <ContentLayout style={[styles.content, { backgroundColor: theme.white }]}>
+                <ContentLayout style={{
+                    marginTop: moderateScale(-120),
+                    backgroundColor: theme.white
+                }}>
 
                     <LinearGradient
                         colors={gradientColors}
@@ -127,9 +131,8 @@ const styles = StyleSheet.create({
         backgroundColor: theme.white,
     },
     backgroundImage: {
-        flex: 1,
-        height: undefined,
-        width: undefined,
+        height: '100%',
+        width: '100%',
         resizeMode: 'cover',
     },
     content: {

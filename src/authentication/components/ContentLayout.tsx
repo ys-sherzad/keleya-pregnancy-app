@@ -26,5 +26,6 @@ const styles = StyleSheet.create({
     defaultContainer: {
         flex: 1,
         paddingHorizontal: moderateScale(32),
+        marginTop: -40,
     }
 });

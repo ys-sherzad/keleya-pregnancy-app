@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { StackScreenProps } from '@react-navigation/stack';
-import { View, StyleSheet, Image, Dimensions, useWindowDimensions } from 'react-native';
+import { View, StyleSheet, Image, Dimensions } from 'react-native';
 import { RouterStackParamList, Screen } from '../types';
 import { theme } from '../../utils/theme';
 import { SafeAreaView } from 'react-native-safe-area-context';
@@ -9,6 +9,8 @@ import Space from '../../shared/Space';
 import Button from '../../shared/Button';
 import Bell from '../../../assets/icons/bell.svg';
 import { moderateScale } from '../../utils/scale';
+
+const NOTIFICATION_BELL_SIZE = moderateScale(40);
 
 const { height } = Dimensions.get('window');
 
@@ -28,7 +30,7 @@ const SuccessScreen = ({ }: SuccessScreenProps) => {
             />
 
             <View style={styles.topSection}>
-                <Bell height={moderateScale(50)} width={moderateScale(50)} fill={theme.greyish_brown} />
+                <Bell height={NOTIFICATION_BELL_SIZE} width={NOTIFICATION_BELL_SIZE} fill={theme.greyish_brown} />
 
                 <Space size={20} />
 

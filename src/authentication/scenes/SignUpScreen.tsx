@@ -71,11 +71,7 @@ const SignUp = ({
                     style={styles.backgroundImage}
                 />
 
-                <ContentLayout
-                    style={{
-                        marginTop: -45,
-                    }}
-                >
+                <ContentLayout>
                     <Title
                         title={`Add your details below to set up and account`}
                     />
@@ -184,8 +180,6 @@ const styles = StyleSheet.create({
         width: '100%',
         height: height * .5,
         resizeMode: 'cover',
-        overflow: 'visible',
-
     },
     checkboxText: {
         flex: 1,

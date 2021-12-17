@@ -53,11 +53,7 @@ const SignIn = ({
                     style={styles.backgroundImage}
                 />
 
-                <ContentLayout
-                    style={{
-                        marginTop: -40
-                    }}
-                >
+                <ContentLayout>
                     <Title
                         title={`Welcome back!`}
                     />

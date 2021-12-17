@@ -6,9 +6,8 @@ import Space from '../../shared/Space';
 import { theme } from '../../utils/theme';
 import { RouterStackParamList, Screen } from '../types';
 import { StackScreenProps } from '@react-navigation/stack';
-import { moderateScale, scale, verticalScale } from '../../utils/scale';
-
-const { height, width } = Dimensions.get('window');
+import { moderateScale, verticalScale } from '../../utils/scale';
+import { SCR_HEIGHT, SCR_WIDTH } from '../../utils/Dimensions';
 
 const pages = [
     {
@@ -99,8 +98,8 @@ export default InitialScreen;
 const styles = StyleSheet.create({
     container: {},
     image: {
-        height,
-        width,
+        height: SCR_HEIGHT,
+        width: SCR_WIDTH,
         resizeMode: 'cover',
     },
     topSectionContainer: {

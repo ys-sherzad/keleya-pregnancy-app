@@ -10,9 +10,7 @@ import ContentLayout from '../components/ContentLayout';
 import Title from '../components/Title';
 import { RouterStackParamList, Screen } from '../types';
 import BackButton from '../../shared/BackButton';
-import { verticalScale } from '../../utils/scale';
-
-const { height } = Dimensions.get('window');
+import { SCR_HEIGHT } from '../../utils/Dimensions';
 
 type DateScreenProps = StackScreenProps<RouterStackParamList, Screen.DateScreen>;
 
@@ -35,9 +33,7 @@ const DateScreen = ({
                 source={require('../../../assets/images/due-date-background-image.jpg')}
                 style={styles.backgroundImage}
             />
-            <ContentLayout style={{
-                marginTop: -45,
-            }}>
+            <ContentLayout>
                 <Title
                     title={`When is your baby due, ${name}?`}
                 />
@@ -73,7 +69,7 @@ const styles = StyleSheet.create({
         backgroundColor: theme.white,
     },
     backgroundImage: {
-        height: height * .65,
+        height: SCR_HEIGHT * .65,
         width: '100%',
         resizeMode: 'cover',
     }

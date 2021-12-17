@@ -45,9 +45,7 @@ const WorkoutScreen = ({
                 style={styles.backgroundImage}
             />
 
-            <ContentLayout style={{
-                marginTop: -40,
-            }}>
+            <ContentLayout>
 
                 <Space size={verticalScale(25)} />
 
