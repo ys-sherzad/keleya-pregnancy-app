@@ -1,5 +1,4 @@
 import * as React from 'react';
-import { StyleSheet } from 'react-native';
 import { createStackNavigator } from '@react-navigation/stack';
 
 // screens
@@ -18,7 +17,7 @@ const Stack = createStackNavigator<RouterStackParamList>();
 const Router = () => {
     return (
         <Stack.Navigator
-            initialRouteName={Screen.SuccessScreen}
+            initialRouteName={Screen.InitialScreen}
             screenOptions={{
                 headerShown: false,
             }}
@@ -36,6 +35,3 @@ const Router = () => {
 
 export default Router;
 
-const styles = StyleSheet.create({
-    container: {}
-});
