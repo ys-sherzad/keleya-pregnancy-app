@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { View, StyleSheet, Image, Dimensions } from 'react-native';
+import { View, StyleSheet, Image } from 'react-native';
 import { StackScreenProps } from '@react-navigation/stack';
 import { RouterStackParamList, Screen } from '../types';
 import { theme } from '../../utils/theme';
@@ -10,9 +10,8 @@ import Space from '../../shared/Space';
 import Button from '../../shared/Button';
 import { Picker } from '@react-native-picker/picker';
 import BackButton from '../../shared/BackButton';
-import { moderateScale, scale, verticalScale } from '../../utils/scale';
-
-const { height } = Dimensions.get('window');
+import { moderateScale, verticalScale } from '../../utils/scale';
+import { SCR_HEIGHT } from '../../utils/Dimensions';
 
 const options = [
     'Once a week',
@@ -98,7 +97,7 @@ const styles = StyleSheet.create({
     },
     backgroundImage: {
         width: '100%',
-        height: height * .65,
+        height: SCR_HEIGHT * .65,
         resizeMode: 'cover',
     },
     pickerItemStyle: {

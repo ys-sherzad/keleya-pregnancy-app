@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { View, StyleSheet, Image, Dimensions } from 'react-native';
+import { View, StyleSheet, Image } from 'react-native';
 import { StackScreenProps } from '@react-navigation/stack';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import Button from '../../shared/Button';

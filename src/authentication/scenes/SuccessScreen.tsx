@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { StackScreenProps } from '@react-navigation/stack';
-import { View, StyleSheet, Image, Dimensions } from 'react-native';
+import { View, StyleSheet, Image } from 'react-native';
 import { RouterStackParamList, Screen } from '../types';
 import { theme } from '../../utils/theme';
 import { SafeAreaView } from 'react-native-safe-area-context';
@@ -9,10 +9,9 @@ import Space from '../../shared/Space';
 import Button from '../../shared/Button';
 import Bell from '../../../assets/icons/bell.svg';
 import { moderateScale } from '../../utils/scale';
+import { SCR_HEIGHT } from '../../utils/Dimensions';
 
 const NOTIFICATION_BELL_SIZE = moderateScale(40);
-
-const { height } = Dimensions.get('window');
 
 type SuccessScreenProps = StackScreenProps<RouterStackParamList, Screen.SuccessScreen>;
 
@@ -73,7 +72,7 @@ const styles = StyleSheet.create({
     },
     backgroundImage: {
         width: '100%',
-        height: height,
+        height: SCR_HEIGHT,
         resizeMode: 'cover',
     },
     topSection: {

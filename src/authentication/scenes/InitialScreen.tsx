@@ -1,13 +1,10 @@
 import React, { useState } from 'react';
-import { View, StyleSheet, ScrollView, Image, NativeSyntheticEvent, NativeScrollEvent } from 'react-native';
-import Text from '../../shared/Text';
+import { View, StyleSheet, ScrollView, NativeSyntheticEvent, NativeScrollEvent } from 'react-native';
 import Button from '../../shared/Button';
-import Space from '../../shared/Space';
-import { theme } from '../../utils/theme';
 import { RouterStackParamList, Screen } from '../types';
 import { StackScreenProps } from '@react-navigation/stack';
 import { moderateScale, verticalScale } from '../../utils/scale';
-import { SCR_HEIGHT, SCR_WIDTH } from '../../utils/Dimensions';
+import { SCR_WIDTH } from '../../utils/Dimensions';
 import NavDot from '../components/NavDot';
 import Slide from '../components/Slide';
 

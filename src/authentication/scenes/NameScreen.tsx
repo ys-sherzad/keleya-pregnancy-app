@@ -1,6 +1,6 @@
+import React from 'react';
 import { StackScreenProps } from '@react-navigation/stack';
-import React, { version } from 'react';
-import { View, StyleSheet, Image, Dimensions } from 'react-native';
+import { View, StyleSheet, Image } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import Button from '../../shared/Button';
 import Space from '../../shared/Space';
@@ -16,8 +16,6 @@ import { nameRules } from '../../utils/validationRules';
 import LinearGradient from 'react-native-linear-gradient';
 import { moderateScale, verticalScale } from '../../utils/scale';
 import { SCR_HEIGHT, SCR_WIDTH } from '../../utils/Dimensions';
-
-const { height } = Dimensions.get('window');
 
 const gradientColors = ["#ffffff00", "rgb(255, 255, 255)", "rgb(255, 255, 255)"];
 

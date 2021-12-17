@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, StyleSheet, Image, Dimensions } from 'react-native';
+import { View, StyleSheet, Image } from 'react-native';
 import { StackScreenProps } from '@react-navigation/stack';
 import { RouterStackParamList, Screen } from '../types';
 import { SafeAreaView } from 'react-native-safe-area-context';
@@ -13,11 +13,10 @@ import KeyboardAwareView from '../../shared/KeyboardAwareView';
 import { useForm, Controller } from 'react-hook-form';
 import { emailRules, signInPasswordRules } from '../../utils/validationRules';
 import BackButton from '../../shared/BackButton';
-import { moderateScale, verticalScale } from '../../utils/scale';
+import { moderateScale } from '../../utils/scale';
+import { SCR_HEIGHT } from '../../utils/Dimensions';
 
 type SignInProps = StackScreenProps<RouterStackParamList, Screen.SignInScreen>;
-
-const { height, width } = Dimensions.get('window');
 
 const SignIn = ({
     navigation
@@ -139,7 +138,7 @@ const styles = StyleSheet.create({
     },
     backgroundImage: {
         width: '100%',
-        height: height * .5,
+        height: SCR_HEIGHT * .5,
         resizeMode: 'cover',
         overflow: 'visible'
     },

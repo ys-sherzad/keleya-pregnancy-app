@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import { View, StyleSheet, Image, Dimensions } from 'react-native';
+import React from 'react';
+import { View, StyleSheet, Image } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { theme } from '../../utils/theme';
 import Title from '../components/Title';
@@ -16,8 +16,7 @@ import { useForm, Controller } from 'react-hook-form';
 import { checkboxRoules, emailRules, signUpPasswordRules } from '../../utils/validationRules';
 import BackButton from '../../shared/BackButton';
 import { moderateScale, verticalScale } from '../../utils/scale';
-
-const { height } = Dimensions.get('window');
+import { SCR_HEIGHT } from '../../utils/Dimensions';
 
 type SignUpProps = StackScreenProps<RouterStackParamList, Screen.SignUpScreen>;
 
@@ -178,7 +177,7 @@ const styles = StyleSheet.create({
     },
     backgroundImage: {
         width: '100%',
-        height: height * .5,
+        height: SCR_HEIGHT * .5,
         resizeMode: 'cover',
     },
     checkboxText: {
