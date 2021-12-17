@@ -21,19 +21,19 @@ const CheckBox = ({
     size = CHECKBOX_SIZE
 }: CheckBoxProps) => {
     return (
-        <TouchableOpacity
-            onPress={onValueChange}
-            style={styles.container}
-        >
-            <View
-                style={[styles.checkbox, { width: size, height: size }]}
+        <View style={styles.container}>
+            <TouchableOpacity
+                onPress={onValueChange}
             >
-                {value && (<CheckIcon height='100%' width='100%' stroke={theme.greyish_brown} />)}
-            </View>
-
+                <View
+                    style={[styles.checkbox, { width: size, height: size }]}
+                >
+                    {value && (<CheckIcon height='100%' width='100%' stroke={theme.greyish_brown} />)}
+                </View>
+            </TouchableOpacity>
             <Space size={10} horizontal />
             {description}
-        </TouchableOpacity>
+        </View>
     );
 };
 
