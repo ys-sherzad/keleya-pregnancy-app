@@ -1,5 +1,5 @@
-import * as React from 'react';
-import { View, StyleSheet, ScrollView, Image, Dimensions } from 'react-native';
+import React, { useState } from 'react';
+import { View, StyleSheet, ScrollView, Image, NativeSyntheticEvent, NativeScrollEvent } from 'react-native';
 import Text from '../../shared/Text';
 import Button from '../../shared/Button';
 import Space from '../../shared/Space';
@@ -8,6 +8,7 @@ import { RouterStackParamList, Screen } from '../types';
 import { StackScreenProps } from '@react-navigation/stack';
 import { moderateScale, verticalScale } from '../../utils/scale';
 import { SCR_HEIGHT, SCR_WIDTH } from '../../utils/Dimensions';
+import NavDot from '../components/NavDot';
 
 const pages = [
     {
@@ -30,10 +31,17 @@ const pages = [
 type InitialScreenProps = StackScreenProps<RouterStackParamList, Screen.InitialScreen>;
 
 const InitialScreen = ({ navigation }: InitialScreenProps) => {
+    const [activeIndex, setActiveIndex] = useState(0);
 
     const _goToSignUp = () => navigation.push(Screen.SignUpScreen);
 
     const _goToSignIn = () => navigation.push(Screen.SignInScreen);
+
+    const _onScroll = (event: NativeSyntheticEvent<NativeScrollEvent>) => {
+        const { x } = event.nativeEvent.contentOffset;
+        const index = Math.round(x / SCR_WIDTH);
+        setActiveIndex(index);
+    };
 
     return (
         <View testID="initial_screen">
@@ -41,6 +49,7 @@ const InitialScreen = ({ navigation }: InitialScreenProps) => {
                 horizontal
                 pagingEnabled
                 showsHorizontalScrollIndicator={false}
+                onScroll={_onScroll}
             >
                 {pages.map((page, index) => (
                     <View key={index.toString()}>
@@ -81,10 +90,11 @@ const InitialScreen = ({ navigation }: InitialScreenProps) => {
                         flexDirection: 'row',
                         alignItems: 'center',
                     }}>
-                    {Array(3).fill(0).map((_, index) => (
-                        <View
+                    {Array(pages.length).fill('').map((_, index) => (
+                        <NavDot
                             key={index.toString()}
-                            style={styles.dot}
+                            currentIndex={index}
+                            {...{ activeIndex }}
                         />
                     ))}
                 </View>
@@ -131,11 +141,5 @@ const styles = StyleSheet.create({
         paddingBottom: 20,
         justifyContent: 'space-around',
     },
-    dot: {
-        height: moderateScale(10),
-        width: moderateScale(10),
-        borderRadius: 99,
-        backgroundColor: theme.pale_teal,
-        marginHorizontal: 3
-    }
+
 });
