@@ -4,7 +4,7 @@ import { moderateScale, verticalScale } from '../utils/scale';
 import { theme } from '../utils/theme';
 import Text from './Text';
 
-//FIXME: Extend Touchable Props types
+//FIXME: Refactor: Extend Touchable Props types
 interface ButtonProps {
     onPress: () => void;
     title: string;
