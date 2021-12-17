@@ -2,6 +2,9 @@
   "name": "KeleyaOnboarding",
   "version": "0.0.1",
   "private": true,
+  "author": "Yasir <ys.sherzad@gmail.com>",
+  "description": "Keleya's onboarding",
+  "repository": "https://github.com/ys-sherzad/keleya-pregnancy-app.git",
   "scripts": {
     "android": "react-native run-android",
     "ios": "react-native run-ios --simulator=\"iPhone 13 Pro Max\"",
