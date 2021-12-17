@@ -9,6 +9,7 @@ import { StackScreenProps } from '@react-navigation/stack';
 import { moderateScale, verticalScale } from '../../utils/scale';
 import { SCR_HEIGHT, SCR_WIDTH } from '../../utils/Dimensions';
 import NavDot from '../components/NavDot';
+import Slide from '../components/Slide';
 
 const pages = [
     {
@@ -50,25 +51,13 @@ const InitialScreen = ({ navigation }: InitialScreenProps) => {
                 pagingEnabled
                 showsHorizontalScrollIndicator={false}
                 onScroll={_onScroll}
+                scrollEventThrottle={16}
             >
                 {pages.map((page, index) => (
-                    <View key={index.toString()}>
-                        <View style={styles.topSectionContainer}>
-                            <Image
-                                source={page.logo}
-                                style={styles.logo}
-                            />
-                            <Space size={10} />
-                            <Text
-                                style={styles.description}>
-                                {page.description}
-                            </Text>
-                        </View>
-                        <Image
-                            source={page.backgroundImage}
-                            style={styles.image}
-                        />
-                    </View>
+                    <Slide
+                        key={index.toString()}
+                        {...{ page }}
+                    />
                 ))}
             </ScrollView>
 
@@ -106,30 +95,6 @@ const InitialScreen = ({ navigation }: InitialScreenProps) => {
 export default InitialScreen;
 
 const styles = StyleSheet.create({
-    container: {},
-    image: {
-        height: SCR_HEIGHT,
-        width: SCR_WIDTH,
-        resizeMode: 'cover',
-    },
-    topSectionContainer: {
-        position: 'absolute',
-        top: 80,
-        alignSelf: 'center',
-        alignItems: 'center',
-        zIndex: 1,
-    },
-    logo: {
-        height: moderateScale(110),
-        width: moderateScale(110),
-        resizeMode: 'contain'
-    },
-    description: {
-        textAlign: 'center',
-        fontSize: moderateScale(23),
-        fontWeight: '500',
-        color: theme.greyish_brown
-    },
     bottomSectionContainer: {
         position: 'absolute',
         bottom: 20,
