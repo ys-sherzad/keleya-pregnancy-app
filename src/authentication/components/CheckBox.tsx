@@ -31,7 +31,7 @@ const CheckBox = ({
                 {value && (<CheckIcon height='100%' width='100%' stroke={theme.greyish_brown} />)}
             </View>
 
-            <Space size={scale(10)} horizontal />
+            <Space size={10} horizontal />
             {description}
         </TouchableOpacity>
     );

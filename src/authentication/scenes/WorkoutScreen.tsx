@@ -46,13 +46,11 @@ const WorkoutScreen = ({
 
             <ContentLayout>
 
-                <Space size={verticalScale(25)} />
+                <Space size={25} />
 
                 <Picker
                     selectedValue={selectedFrequency}
-                    onValueChange={(itemValue) =>
-                        setSelectedFrequency(itemValue)
-                    }>
+                    onValueChange={setSelectedFrequency}>
                     {options.map(opt => (
                         <Picker.Item key={opt} label={opt} value={opt} fontFamily='Raleway' />
                     ))}

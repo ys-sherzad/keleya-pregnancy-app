@@ -117,7 +117,7 @@ const SignUp = ({
                         )}
                     />
 
-                    <Space size={verticalScale(18)} />
+                    <Space size={18} />
 
                     <Controller
                         {...{ control }}
