@@ -1,7 +1,10 @@
 import * as React from 'react';
 import { TouchableOpacity, StyleSheet, StyleProp, ViewStyle } from 'react-native';
 import LeftArrow from '../../assets/icons/left-arrow.svg';
+import { moderateScale } from '../utils/scale';
 import { theme } from '../utils/theme';
+
+const ICON_SIZE = moderateScale(18);
 
 type BackButtonProps = React.ComponentProps<typeof TouchableOpacity> & {
     style?: StyleProp<ViewStyle>;
@@ -17,7 +20,7 @@ const BackButton = ({
             style={[styles.defaultStyle, style]}
             {...rest}
         >
-            <LeftArrow height={20} width={20} fill={theme.greyish_brown} />
+            <LeftArrow height={ICON_SIZE} width={ICON_SIZE} fill={theme.greyish_brown} />
         </TouchableOpacity>
     );
 };
