@@ -4,7 +4,7 @@ import Space from '../../shared/Space';
 import { SCR_HEIGHT, SCR_WIDTH } from '../../utils/dimensions';
 import { moderateScale } from '../../utils/scale';
 import { theme } from '../../utils/theme';
-
+import { useTranslation } from 'react-i18next';
 interface SlideProps {
     page: any;
 }
@@ -12,6 +12,7 @@ interface SlideProps {
 const Slide = ({
     page
 }: SlideProps) => {
+    const { t } = useTranslation();
     return (
         <View>
             <View style={styles.topSectionContainer}>
@@ -22,7 +23,7 @@ const Slide = ({
                 <Space size={10} />
                 <Text
                     style={styles.description}>
-                    {page.description}
+                    {t('fitAndRelaxedPregnancy')}
                 </Text>
             </View>
             <Image
@@ -46,6 +47,7 @@ const styles = StyleSheet.create({
         top: 80,
         alignSelf: 'center',
         alignItems: 'center',
+        paddingHorizontal: moderateScale(40),
         zIndex: 1,
     },
     logo: {
@@ -57,6 +59,6 @@ const styles = StyleSheet.create({
         textAlign: 'center',
         fontSize: moderateScale(23),
         fontWeight: '500',
-        color: theme.greyish_brown
+        color: theme.greyish_brown,
     },
 });

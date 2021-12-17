@@ -1,0 +1,31 @@
+export default {
+    translation: {
+        getStarted: 'Get started',
+        orLogin: 'Or login',
+        fitAndRelaxedPregnancy: 'For a fit and relaxed pregnancy',
+        addDetailsBelow: 'Add your details below to set up and account',
+        exampleEmail: 'example@gmail.com',
+        enterPassword: 'Enter a password',
+        createAccount: 'Create account',
+        iHaveReadThe: `I've read the`,
+        privacyPolicy: 'privacy policy',
+        iAcceptThe: 'I accept the',
+        termsAndCoditions: 'terms & conditions',
+        and: 'and',
+        keleyaAdvice: `Keleya's advice`,
+        pleaseEnterValidEmail: 'Please enter a valid email address.',
+        passwordValidation: 'Password must be at least 8 characters containing a number, a symbol, an uppercase, and a lowercase letter.',
+        welcomeBack: 'Welcome back!',
+        forgotPassword: 'Have you forgotten your password?',
+        login: 'Log in',
+        whatShouldWeCallYou: `It's great that you're here! First things first, what should we call you?`,
+        maxLengthReached: 'Maximum length reached.',
+        yourName: 'Your Name',
+        continue: 'Continue',
+        whenIsYourBabyDue: 'When is your baby due,',
+        howManyTimeAweekActive: `How many times a week do you want to be active?`,
+        getNotificationsToBoostMotivation: 'Get notifications to boost your motivations',
+        skip: 'Skip',
+        allowNotifications: 'Allow notifications'
+    }
+}

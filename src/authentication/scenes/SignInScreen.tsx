@@ -11,10 +11,11 @@ import ContentLayout from '../components/ContentLayout';
 import Title from '../components/Title';
 import KeyboardAwareView from '../../shared/KeyboardAwareView';
 import { useForm, Controller } from 'react-hook-form';
-import { emailRules, signInPasswordRules } from '../../utils/validationRules';
+import { emailRegex, passwordRegex } from '../../utils/validationRules';
 import BackButton from '../../shared/BackButton';
 import { moderateScale } from '../../utils/scale';
 import { SCR_HEIGHT } from '../../utils/dimensions';
+import { useTranslation } from 'react-i18next';
 
 type SignInProps = StackScreenProps<RouterStackParamList, Screen.SignInScreen>;
 
@@ -40,6 +41,7 @@ const SignIn = ({
 
     const _goToSuccessScreen = () => navigation.push(Screen.SuccessScreen);
 
+    const { t } = useTranslation();
     return (
         <SafeAreaView
             edges={['left', 'right', 'bottom']}
@@ -54,7 +56,7 @@ const SignIn = ({
 
                 <ContentLayout>
                     <Title
-                        title={`Welcome back!`}
+                        title={t('welcomeBack')}
                     />
 
                     <Space size={18} />
@@ -62,10 +64,16 @@ const SignIn = ({
                     <Controller
                         {...{ control }}
                         name='email'
-                        rules={emailRules}
+                        rules={{
+                            required: true,
+                            pattern: {
+                                value: emailRegex,
+                                message: t('pleaseEnterValidEmail')
+                            }
+                        }}
                         render={({ field: { onChange, value, onBlur } }) => (
                             <Input
-                                placeholder='example@gmail.com'
+                                placeholder={t('exampleEmail')}
                                 value={value}
                                 onChangeText={onChange}
                                 onBlur={onBlur}
@@ -82,10 +90,16 @@ const SignIn = ({
                     <Controller
                         {...{ control }}
                         name='password'
-                        rules={signInPasswordRules}
+                        rules={{
+                            required: true,
+                            pattern: {
+                                value: passwordRegex,
+                                message: t('passwordValidation')
+                            }
+                        }}
                         render={({ field: { onChange, value, onBlur } }) => (
                             <Input
-                                placeholder='Enter a password'
+                                placeholder={t('enterPassword')}
                                 value={value}
                                 onChangeText={onChange}
                                 onBlur={onBlur}
@@ -104,7 +118,7 @@ const SignIn = ({
 
                     <Button
                         onPress={() => { }}
-                        title='Have you forgotten your password?'
+                        title={t('forgotPassword')}
                         customTextStyle={styles.forgotPasswordText}
                     />
 
@@ -112,7 +126,7 @@ const SignIn = ({
 
                     <Button
                         onPress={_goToSuccessScreen}
-                        title='Log in'
+                        title={t('login')}
                         mode='contained'
                         disabled={!isValid}
                     />

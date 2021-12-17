@@ -12,10 +12,10 @@ import { NameScreenFormData, RouterStackParamList, Screen } from '../types';
 import KeyboardAwareView from '../../shared/KeyboardAwareView';
 import BackButton from '../../shared/BackButton';
 import { useForm, Controller } from 'react-hook-form';
-import { nameRules } from '../../utils/validationRules';
 import LinearGradient from 'react-native-linear-gradient';
 import { moderateScale, verticalScale } from '../../utils/scale';
 import { SCR_HEIGHT, SCR_WIDTH } from '../../utils/dimensions';
+import { useTranslation } from 'react-i18next';
 
 const gradientColors = ["#ffffff00", "rgb(255, 255, 255)", "rgb(255, 255, 255)"];
 
@@ -43,6 +43,7 @@ const NameScreen = ({
         navigation.push(Screen.DateScreen, data);
     };
 
+    const { t } = useTranslation();
     return (
         <SafeAreaView
             edges={['left', 'right', 'bottom']}
@@ -73,7 +74,7 @@ const NameScreen = ({
                     />
 
                     <Title
-                        title={`It's great that you're here! First things first, what should we call you?`}
+                        title={t('whatShouldWeCallYou')}
                     />
 
                     <Space size={18} />
@@ -81,11 +82,18 @@ const NameScreen = ({
                     <Controller
                         {...{ control }}
                         name='name'
-                        rules={nameRules}
+                        rules={{
+                            required: true,
+                            minLength: 2,
+                            maxLength: {
+                                value: 15,
+                                message: t('maxLengthReached')
+                            }
+                        }}
                         render={({ field: { onChange, value } }) => (
                             <Input
                                 value={value}
-                                placeholder='Your Name'
+                                placeholder={t('yourName')}
                                 testID='name_input'
                                 onChangeText={onChange}
                                 customInputStyle={{
@@ -104,7 +112,7 @@ const NameScreen = ({
 
                     <Button
                         onPress={handleSubmit(_continue)}
-                        title='Continue'
+                        title={t('continue')}
                         mode='contained'
                         disabled={!isValid}
                     />

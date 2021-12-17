@@ -11,6 +11,7 @@ import Title from '../components/Title';
 import { RouterStackParamList, Screen } from '../types';
 import BackButton from '../../shared/BackButton';
 import { SCR_HEIGHT } from '../../utils/dimensions';
+import { useTranslation } from 'react-i18next';
 
 type DateScreenProps = StackScreenProps<RouterStackParamList, Screen.DateScreen>;
 
@@ -23,6 +24,7 @@ const DateScreen = ({
 
     const _goToWorkoutScreen = () => navigation.push(Screen.WorkoutScreen);
 
+    const { t } = useTranslation();
     return (
         <SafeAreaView
             edges={['left', 'right', 'bottom']}
@@ -35,7 +37,7 @@ const DateScreen = ({
             />
             <ContentLayout>
                 <Title
-                    title={`When is your baby due, ${name}?`}
+                    title={`${t('whenIsYourBabyDue')} ${name}?`}
                 />
 
                 <Space size={30} />
@@ -46,7 +48,7 @@ const DateScreen = ({
 
                 <Button
                     onPress={_goToWorkoutScreen}
-                    title='Continue'
+                    title={t('continue')}
                     mode='contained'
                 />
             </ContentLayout>

@@ -10,6 +10,7 @@ import Button from '../../shared/Button';
 import Bell from '../../../assets/icons/bell.svg';
 import { moderateScale } from '../../utils/scale';
 import { SCR_HEIGHT } from '../../utils/dimensions';
+import { useTranslation } from 'react-i18next';
 
 const NOTIFICATION_BELL_SIZE = moderateScale(40);
 
@@ -17,6 +18,7 @@ type SuccessScreenProps = StackScreenProps<RouterStackParamList, Screen.SuccessS
 
 const SuccessScreen = ({ }: SuccessScreenProps) => {
 
+    const { t } = useTranslation();
     return (
         <SafeAreaView
             edges={['left', 'right', 'bottom']}
@@ -34,7 +36,7 @@ const SuccessScreen = ({ }: SuccessScreenProps) => {
                 <Space size={20} />
 
                 <Title
-                    title='Get notifications to boost your motivations'
+                    title={t('getNotificationsToBoostMotivation')}
                 />
             </View>
 
@@ -42,7 +44,7 @@ const SuccessScreen = ({ }: SuccessScreenProps) => {
 
                 <Button
                     onPress={() => { }}
-                    title='Skip'
+                    title={t('skip')}
                     customTextStyle={{
                         fontSize: moderateScale(19),
                     }}
@@ -52,7 +54,7 @@ const SuccessScreen = ({ }: SuccessScreenProps) => {
 
                 <Button
                     onPress={() => { }}
-                    title='Allow notifications'
+                    title={t('allowNotifications')}
                     mode='contained'
                 />
             </View>

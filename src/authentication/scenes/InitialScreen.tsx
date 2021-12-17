@@ -7,28 +7,28 @@ import { moderateScale, verticalScale } from '../../utils/scale';
 import { SCR_WIDTH } from '../../utils/dimensions';
 import NavDot from '../components/NavDot';
 import Slide from '../components/Slide';
+import { useTranslation } from 'react-i18next';
 
 const pages = [
     {
         logo: require('../../../assets/images/keleya-logo.png'),
         backgroundImage: require('../../../assets/images/first-intro-image.png'),
-        description: `For a fit and relaxed\npregnancy`
     },
     {
         logo: require('../../../assets/images/keleya-logo.png'),
         backgroundImage: require('../../../assets/images/first-intro-image.png'),
-        description: `For a fit and relaxed\npregnancy`
     },
     {
         logo: require('../../../assets/images/keleya-logo.png'),
         backgroundImage: require('../../../assets/images/first-intro-image.png'),
-        description: `For a fit and relaxed\npregnancy`
     },
 ];
 
 type InitialScreenProps = StackScreenProps<RouterStackParamList, Screen.InitialScreen>;
 
 const InitialScreen = ({ navigation }: InitialScreenProps) => {
+
+
     const [activeIndex, setActiveIndex] = useState(0);
 
     const _goToSignUp = () => navigation.push(Screen.SignUpScreen);
@@ -41,6 +41,7 @@ const InitialScreen = ({ navigation }: InitialScreenProps) => {
         setActiveIndex(index);
     };
 
+    const { t } = useTranslation();
     return (
         <View testID="initial_screen">
             <ScrollView
@@ -62,13 +63,13 @@ const InitialScreen = ({ navigation }: InitialScreenProps) => {
                 <Button
                     testID='get_started'
                     onPress={_goToSignUp}
-                    title='Get Started'
+                    title={t('getStarted')}
                     mode='contained'
                 />
                 <Button
                     testID='login'
                     onPress={_goToSignIn}
-                    title='Or login'
+                    title={t('orLogin')}
                 />
                 <View
                     testID='nav_dots'

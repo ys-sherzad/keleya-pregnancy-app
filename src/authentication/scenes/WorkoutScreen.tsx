@@ -10,8 +10,9 @@ import Space from '../../shared/Space';
 import Button from '../../shared/Button';
 import { Picker } from '@react-native-picker/picker';
 import BackButton from '../../shared/BackButton';
-import { moderateScale, verticalScale } from '../../utils/scale';
+import { moderateScale } from '../../utils/scale';
 import { SCR_HEIGHT } from '../../utils/dimensions';
+import { useTranslation } from 'react-i18next';
 
 const options = [
     'Once a week',
@@ -33,6 +34,7 @@ const WorkoutScreen = ({
 
     const _goToSuccessScreen = () => navigation.push(Screen.SuccessScreen);
 
+    const { t } = useTranslation();
     return (
         <SafeAreaView
             edges={['left', 'right', 'bottom']}
@@ -60,13 +62,13 @@ const WorkoutScreen = ({
 
                 <Button
                     onPress={_goToSuccessScreen}
-                    title='Continue'
+                    title={t('continue')}
                     mode='contained'
                 />
             </ContentLayout>
 
             <Title
-                title={`How many times a week do you want to be active?`}
+                title={t('howManyTimeAweekActive')}
                 customStyle={{
                     position: 'absolute',
                     top: 100,

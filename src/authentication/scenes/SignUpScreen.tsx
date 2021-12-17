@@ -13,10 +13,11 @@ import { RouterStackParamList, Screen } from '../types';
 import Text from '../../shared/Text';
 import KeyboardAwareView from '../../shared/KeyboardAwareView';
 import { useForm, Controller } from 'react-hook-form';
-import { checkboxRoules, emailRules, signUpPasswordRules } from '../../utils/validationRules';
+import { emailRegex, passwordRegex } from '../../utils/validationRules';
 import BackButton from '../../shared/BackButton';
 import { moderateScale } from '../../utils/scale';
 import { SCR_HEIGHT } from '../../utils/dimensions';
+import { useTranslation } from 'react-i18next';
 
 type SignUpProps = StackScreenProps<RouterStackParamList, Screen.SignUpScreen>;
 
@@ -52,16 +53,17 @@ const SignUp = ({
 
     const _renderPrivacyPolicyText = () => (
         <Text style={styles.checkboxText}>
-            I've read the <Text onPress={_openPrivacyPolicy} style={styles.textBold}>privacy policy</Text>
+            {t('iHaveReadThe')} <Text onPress={_openPrivacyPolicy} style={styles.textBold}>{t('privacyPolicy')}</Text>
         </Text>
     );
 
     const _renderTermsAndConditionsText = () => (
         <Text style={styles.checkboxText}>
-            I accept the <Text onPress={_openTermAndConditions} style={styles.textBold}>terms & conditions</Text> and <Text onPress={_openKeleyaAdvice} style={styles.textBold}>Keleya's advice</Text>
+            {t('iAcceptThe')} <Text onPress={_openTermAndConditions} style={styles.textBold}>{t('termsAndConditions')}</Text> {t('and')} <Text onPress={_openKeleyaAdvice} style={styles.textBold}>{t('keleyaAdvice')}</Text>
         </Text>
     );
 
+    const { t } = useTranslation();
     return (
         <SafeAreaView
             edges={['left', 'right', 'bottom']}
@@ -77,7 +79,7 @@ const SignUp = ({
 
                 <ContentLayout>
                     <Title
-                        title={`Add your details below to set up and account`}
+                        title={t('addDetailsBelow')}
                     />
 
                     <Space size={18} />
@@ -85,10 +87,16 @@ const SignUp = ({
                     <Controller
                         {...{ control }}
                         name='email'
-                        rules={emailRules}
+                        rules={{
+                            required: true,
+                            pattern: {
+                                value: emailRegex,
+                                message: t('pleaseEnterValidEmail')
+                            }
+                        }}
                         render={({ field: { onChange, value, onBlur } }) => (
                             <Input
-                                placeholder='example@gmail.com'
+                                placeholder={t('exampleEmail')}
                                 value={value}
                                 onChangeText={onChange}
                                 onBlur={onBlur}
@@ -105,10 +113,16 @@ const SignUp = ({
                     <Controller
                         {...{ control }}
                         name='password'
-                        rules={signUpPasswordRules}
+                        rules={{
+                            required: true,
+                            pattern: {
+                                value: passwordRegex,
+                                message: t('passwordValidation')
+                            }
+                        }}
                         render={({ field: { onChange, value, onBlur } }) => (
                             <Input
-                                placeholder='Enter a password'
+                                placeholder={t('enterPassword')}
                                 value={value}
                                 onChangeText={onChange}
                                 onBlur={onBlur}
@@ -127,7 +141,9 @@ const SignUp = ({
                     <Controller
                         {...{ control }}
                         name='privacyPolicy'
-                        rules={checkboxRoules}
+                        rules={{
+                            required: true
+                        }}
                         render={({ field: { onChange, value } }) => (
                             <CheckBox
                                 value={value}
@@ -142,7 +158,9 @@ const SignUp = ({
                     <Controller
                         {...{ control }}
                         name='termsAndConditions'
-                        rules={checkboxRoules}
+                        rules={{
+                            required: true
+                        }}
                         render={({ field: { onChange, value } }) => (
                             <CheckBox
                                 value={value}
@@ -156,7 +174,7 @@ const SignUp = ({
 
                     <Button
                         onPress={_goToNameScreen}
-                        title='Create account'
+                        title={t('createAccount')}
                         mode='contained'
                         disabled={!isValid}
                     />
