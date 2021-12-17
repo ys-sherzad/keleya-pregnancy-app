@@ -15,7 +15,7 @@ import KeyboardAwareView from '../../shared/KeyboardAwareView';
 import { useForm, Controller } from 'react-hook-form';
 import { checkboxRoules, emailRules, signUpPasswordRules } from '../../utils/validationRules';
 import BackButton from '../../shared/BackButton';
-import { moderateScale, verticalScale } from '../../utils/scale';
+import { moderateScale } from '../../utils/scale';
 import { SCR_HEIGHT } from '../../utils/dimensions';
 
 type SignUpProps = StackScreenProps<RouterStackParamList, Screen.SignUpScreen>;
@@ -44,16 +44,21 @@ const SignUp = ({
 
     const _goToNameScreen = () => navigation.push(Screen.NameScreen);
 
+    const _openPrivacyPolicy = () => { };
+
+    const _openTermAndConditions = () => { };
+
+    const _openKeleyaAdvice = () => { };
 
     const _renderPrivacyPolicyText = () => (
         <Text style={styles.checkboxText}>
-            I've read the <Text style={{ fontWeight: '700' }}>privacy policy</Text>
+            I've read the <Text onPress={_openPrivacyPolicy} style={styles.textBold}>privacy policy</Text>
         </Text>
     );
 
     const _renderTermsAndConditionsText = () => (
         <Text style={styles.checkboxText}>
-            I accept the <Text style={{ fontWeight: '700' }}>terms & conditions</Text> and <Text style={{ fontWeight: '700' }}>Keleya's advice</Text>
+            I accept the <Text onPress={_openTermAndConditions} style={styles.textBold}>terms & conditions</Text> and <Text onPress={_openKeleyaAdvice} style={styles.textBold}>Keleya's advice</Text>
         </Text>
     );
 
@@ -184,5 +189,8 @@ const styles = StyleSheet.create({
         flex: 1,
         fontSize: moderateScale(13),
         fontWeight: '500',
+    },
+    textBold: {
+        fontWeight: '700'
     }
 });
