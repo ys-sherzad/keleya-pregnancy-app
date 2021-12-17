@@ -15,7 +15,7 @@ import { useForm, Controller } from 'react-hook-form';
 import { nameRules } from '../../utils/validationRules';
 import LinearGradient from 'react-native-linear-gradient';
 import { moderateScale, verticalScale } from '../../utils/scale';
-import { SCR_HEIGHT, SCR_WIDTH } from '../../utils/Dimensions';
+import { SCR_HEIGHT, SCR_WIDTH } from '../../utils/dimensions';
 
 const gradientColors = ["#ffffff00", "rgb(255, 255, 255)", "rgb(255, 255, 255)"];
 
