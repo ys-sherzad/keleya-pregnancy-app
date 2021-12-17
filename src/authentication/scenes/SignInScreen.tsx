@@ -91,11 +91,7 @@ const SignIn = ({
                         {...{ control }}
                         name='password'
                         rules={{
-                            required: true,
-                            pattern: {
-                                value: passwordRegex,
-                                message: t('passwordValidation')
-                            }
+                            required: true
                         }}
                         render={({ field: { onChange, value, onBlur } }) => (
                             <Input
