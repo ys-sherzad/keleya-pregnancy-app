@@ -43,6 +43,8 @@ const SignUp = ({
         }
     });
 
+    const { t } = useTranslation();
+
     const _goToNameScreen = () => navigation.push(Screen.NameScreen);
 
     const _openPrivacyPolicy = () => { };
@@ -63,7 +65,7 @@ const SignUp = ({
         </Text>
     );
 
-    const { t } = useTranslation();
+
     return (
         <SafeAreaView
             edges={['left', 'right', 'bottom']}

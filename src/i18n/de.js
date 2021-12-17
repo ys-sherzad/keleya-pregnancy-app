@@ -10,7 +10,7 @@ export default {
         iHaveReadThe: `I've read the`,
         privacyPolicy: 'privacy policy',
         iAcceptThe: 'I accept the',
-        termsAndCoditions: 'terms & conditions',
+        termsAndConditions: 'terms & conditions',
         and: 'and',
         keleyaAdvice: `Keleya's advice`,
         pleaseEnterValidEmail: 'Please enter a valid email address.',
