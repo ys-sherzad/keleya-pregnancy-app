@@ -16,7 +16,7 @@ import { useForm, Controller } from 'react-hook-form';
 import { checkboxRoules, emailRules, signUpPasswordRules } from '../../utils/validationRules';
 import BackButton from '../../shared/BackButton';
 import { moderateScale, verticalScale } from '../../utils/scale';
-import { SCR_HEIGHT } from '../../utils/Dimensions';
+import { SCR_HEIGHT } from '../../utils/dimensions';
 
 type SignUpProps = StackScreenProps<RouterStackParamList, Screen.SignUpScreen>;
 

@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { Text, View, StyleSheet, Image } from 'react-native';
 import Space from '../../shared/Space';
-import { SCR_HEIGHT, SCR_WIDTH } from '../../utils/Dimensions';
+import { SCR_HEIGHT, SCR_WIDTH } from '../../utils/dimensions';
 import { moderateScale } from '../../utils/scale';
 import { theme } from '../../utils/theme';
 

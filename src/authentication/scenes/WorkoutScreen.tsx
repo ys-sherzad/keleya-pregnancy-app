@@ -11,7 +11,7 @@ import Button from '../../shared/Button';
 import { Picker } from '@react-native-picker/picker';
 import BackButton from '../../shared/BackButton';
 import { moderateScale, verticalScale } from '../../utils/scale';
-import { SCR_HEIGHT } from '../../utils/Dimensions';
+import { SCR_HEIGHT } from '../../utils/dimensions';
 
 const options = [
     'Once a week',

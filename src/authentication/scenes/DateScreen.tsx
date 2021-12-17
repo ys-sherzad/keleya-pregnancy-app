@@ -10,7 +10,7 @@ import ContentLayout from '../components/ContentLayout';
 import Title from '../components/Title';
 import { RouterStackParamList, Screen } from '../types';
 import BackButton from '../../shared/BackButton';
-import { SCR_HEIGHT } from '../../utils/Dimensions';
+import { SCR_HEIGHT } from '../../utils/dimensions';
 
 type DateScreenProps = StackScreenProps<RouterStackParamList, Screen.DateScreen>;
 

@@ -4,7 +4,7 @@ import Button from '../../shared/Button';
 import { RouterStackParamList, Screen } from '../types';
 import { StackScreenProps } from '@react-navigation/stack';
 import { moderateScale, verticalScale } from '../../utils/scale';
-import { SCR_WIDTH } from '../../utils/Dimensions';
+import { SCR_WIDTH } from '../../utils/dimensions';
 import NavDot from '../components/NavDot';
 import Slide from '../components/Slide';
 

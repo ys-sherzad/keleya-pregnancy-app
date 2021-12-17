@@ -9,7 +9,7 @@ import Space from '../../shared/Space';
 import Button from '../../shared/Button';
 import Bell from '../../../assets/icons/bell.svg';
 import { moderateScale } from '../../utils/scale';
-import { SCR_HEIGHT } from '../../utils/Dimensions';
+import { SCR_HEIGHT } from '../../utils/dimensions';
 
 const NOTIFICATION_BELL_SIZE = moderateScale(40);
 
