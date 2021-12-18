@@ -5,7 +5,7 @@ import { SafeAreaView } from 'react-native-safe-area-context';
 import Button from '../../shared/Button';
 import Space from '../../shared/Space';
 import { theme } from '../../utils/theme';
-import DatePicker from '../components/DatePicker';
+import DatePicker from '../components/DatePicker/index';
 import ContentLayout from '../components/ContentLayout';
 import Title from '../components/Title';
 import { RouterStackParamList, Screen } from '../types';
