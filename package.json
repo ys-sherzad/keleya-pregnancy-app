@@ -9,6 +9,7 @@
     "android": "react-native run-android",
     "ios": "react-native run-ios --simulator=\"iPhone 13 Pro Max\"",
     "clean:ios": "cd ios && xcodebuild clean && cd ..",
+    "clean:android": "cd android && ./gradlew clean",
     "start": "react-native start",
     "start:reset": "react-native start -- --reset-cache",
     "test": "jest",
