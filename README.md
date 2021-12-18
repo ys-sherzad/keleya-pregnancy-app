@@ -39,3 +39,7 @@ I really enjoyed working on this task, full of challenges and dealing with Heade
 * Prevent hardware back navigation on the `Success` screen,
 * fix import for platform specific files - Typescript
 * add subtle animations to the elements on screen load.
+
+**Bonus tasks**
+✅ language support
+🆇 E2E screenshots: Not complete
