@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useRef, useState } from 'react';
 import { View, StyleSheet, Image } from 'react-native';
 import { StackScreenProps } from '@react-navigation/stack';
 import { RouterStackParamList, Screen } from '../types';
@@ -8,11 +8,11 @@ import ContentLayout from '../components/ContentLayout';
 import Title from '../components/Title';
 import Space from '../../shared/Space';
 import Button from '../../shared/Button';
-import { Picker } from '@react-native-picker/picker';
 import BackButton from '../../shared/BackButton';
 import { moderateScale } from '../../utils/scale';
 import { SCR_HEIGHT } from '../../utils/dimensions';
 import { useTranslation } from 'react-i18next';
+import WorkoutPicker from '../components/WorkoutPicker/index';
 
 const options = [
     'Once a week',
@@ -30,9 +30,13 @@ type WorkoutScreenProps = StackScreenProps<RouterStackParamList, Screen.WorkoutS
 const WorkoutScreen = ({
     navigation
 }: WorkoutScreenProps) => {
+
+
     const [selectedFrequency, setSelectedFrequency] = useState(options[2]);
 
     const _goToSuccessScreen = () => navigation.push(Screen.SuccessScreen);
+
+
 
     const { t } = useTranslation();
     return (
@@ -50,13 +54,11 @@ const WorkoutScreen = ({
 
                 <Space size={25} />
 
-                <Picker
-                    selectedValue={selectedFrequency}
-                    onValueChange={setSelectedFrequency}>
-                    {options.map(opt => (
-                        <Picker.Item key={opt} label={opt} value={opt} fontFamily='Raleway' />
-                    ))}
-                </Picker>
+                <WorkoutPicker
+                    {...{ selectedFrequency }}
+                    {...{ setSelectedFrequency }}
+                    {...{ options }}
+                />
 
                 <View style={styles.flexOne} />
 
@@ -100,7 +102,4 @@ const styles = StyleSheet.create({
         height: SCR_HEIGHT * .65,
         resizeMode: 'cover',
     },
-    pickerItemStyle: {
-        fontFamily: 'Raleway'
-    }
 });
