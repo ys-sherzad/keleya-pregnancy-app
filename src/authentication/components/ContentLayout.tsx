@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { View, StyleSheet } from 'react-native';
+import { View, StyleSheet, Platform } from 'react-native';
 import { moderateScale } from '../../utils/scale';
 
 type ContentLayoutProps = React.ComponentProps<typeof View>;
@@ -27,5 +27,10 @@ const styles = StyleSheet.create({
         flex: 1,
         paddingHorizontal: moderateScale(32),
         marginTop: -40,
+        ...Platform.select({
+            android: {
+                paddingBottom: moderateScale(20),
+            }
+        })
     }
 });

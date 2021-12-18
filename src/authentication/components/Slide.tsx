@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { Text, View, StyleSheet, Image } from 'react-native';
+import { Text, View, StyleSheet, Image, Platform } from 'react-native';
 import Space from '../../shared/Space';
 import { SCR_HEIGHT, SCR_WIDTH } from '../../utils/dimensions';
 import { moderateScale } from '../../utils/scale';
@@ -44,7 +44,7 @@ const styles = StyleSheet.create({
     },
     topSectionContainer: {
         position: 'absolute',
-        top: 80,
+        top: Platform.OS === 'ios' ? 80 : 50,
         alignSelf: 'center',
         alignItems: 'center',
         paddingHorizontal: moderateScale(40),

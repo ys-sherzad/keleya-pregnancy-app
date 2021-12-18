@@ -49,7 +49,7 @@ export default Button;
 
 const styles = StyleSheet.create({
     defaultBtnStyle: {
-        height: verticalScale(40),
+        height: moderateScale(45),
         width: '100%',
         justifyContent: 'center',
         alignItems: 'center',

@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
-import { Text, View, StyleSheet, TextInput, StyleProp, TextStyle } from 'react-native';
+import { Text, View, StyleSheet, TextInput, StyleProp, TextStyle, Platform } from 'react-native';
 import { theme } from '../../utils/theme';
 import EyeOn from '../../../assets/icons/eye-on.svg';
 import EyeOff from '../../../assets/icons/eye-off.svg';
 import { TouchableOpacity } from 'react-native-gesture-handler';
 import Space from '../../shared/Space';
-import { moderateScale, scale, verticalScale } from '../../utils/scale';
+import { moderateScale, scale } from '../../utils/scale';
 
 const EYE_ICON_SIZE = moderateScale(20);
 
@@ -75,7 +75,11 @@ const styles = StyleSheet.create({
   container: {
     flexDirection: 'row',
     alignItems: 'center',
-    paddingVertical: verticalScale(8),
+    ...Platform.select({
+      ios: {
+        paddingVertical: moderateScale(8),
+      }
+    })
   },
   defaultInputStyle: {
     flex: 1,

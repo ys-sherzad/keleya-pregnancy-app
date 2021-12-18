@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { TouchableOpacity, StyleSheet, StyleProp, ViewStyle } from 'react-native';
+import { TouchableOpacity, StyleSheet, StyleProp, ViewStyle, Platform } from 'react-native';
 import LeftArrow from '../../assets/icons/left-arrow.svg';
 import { moderateScale } from '../utils/scale';
 import { theme } from '../utils/theme';
@@ -30,7 +30,7 @@ export default BackButton;
 const styles = StyleSheet.create({
     defaultStyle: {
         position: 'absolute',
-        top: 50,
+        top: Platform.OS === 'ios' ? 50 : 20,
         left: 20,
         padding: moderateScale(6)
     }

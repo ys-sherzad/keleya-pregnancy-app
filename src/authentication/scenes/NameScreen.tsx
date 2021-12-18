@@ -13,7 +13,7 @@ import KeyboardAwareView from '../../shared/KeyboardAwareView';
 import BackButton from '../../shared/BackButton';
 import { useForm, Controller } from 'react-hook-form';
 import LinearGradient from 'react-native-linear-gradient';
-import { moderateScale, verticalScale } from '../../utils/scale';
+import { moderateScale } from '../../utils/scale';
 import { SCR_HEIGHT, SCR_WIDTH } from '../../utils/dimensions';
 import { useTranslation } from 'react-i18next';
 
@@ -62,6 +62,7 @@ const NameScreen = ({
                         style={styles.backgroundImage}
                     />
                 </View>
+
 
                 <ContentLayout style={{
                     marginTop: moderateScale(-120),
@@ -116,6 +117,8 @@ const NameScreen = ({
                         mode='contained'
                         disabled={!isValid}
                     />
+
+
                 </ContentLayout>
 
                 <BackButton
@@ -145,9 +148,9 @@ const styles = StyleSheet.create({
         marginTop: moderateScale(-120)
     },
     shadowBox: {
-        height: verticalScale(30),
+        height: moderateScale(30),
         position: 'absolute',
-        top: -40,
+        top: -30,
         left: 0,
         right: 0,
     }

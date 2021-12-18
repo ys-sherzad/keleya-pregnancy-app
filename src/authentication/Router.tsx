@@ -17,7 +17,7 @@ const Stack = createStackNavigator<RouterStackParamList>();
 const Router = () => {
     return (
         <Stack.Navigator
-            initialRouteName={Screen.InitialScreen}
+            initialRouteName={Screen.NameScreen}
             screenOptions={{
                 headerShown: false,
             }}

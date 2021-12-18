@@ -3,7 +3,7 @@ import { View, StyleSheet, ScrollView, NativeSyntheticEvent, NativeScrollEvent }
 import Button from '../../shared/Button';
 import { RouterStackParamList, Screen } from '../types';
 import { StackScreenProps } from '@react-navigation/stack';
-import { moderateScale, verticalScale } from '../../utils/scale';
+import { moderateScale } from '../../utils/scale';
 import { SCR_WIDTH } from '../../utils/dimensions';
 import NavDot from '../components/NavDot';
 import Slide from '../components/Slide';
@@ -95,13 +95,12 @@ export default InitialScreen;
 const styles = StyleSheet.create({
     bottomSectionContainer: {
         position: 'absolute',
-        bottom: 20,
-        height: verticalScale(120),
+        bottom: 0,
+        height: moderateScale(120),
         width: '84%',
         alignItems: 'center',
         alignSelf: 'center',
         paddingHorizontal: moderateScale(8),
-        paddingBottom: 20,
         justifyContent: 'space-around',
     },
 

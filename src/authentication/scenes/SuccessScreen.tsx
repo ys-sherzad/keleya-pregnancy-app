@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { StackScreenProps } from '@react-navigation/stack';
-import { View, StyleSheet, Image } from 'react-native';
+import { View, StyleSheet, Image, Platform } from 'react-native';
 import { RouterStackParamList, Screen } from '../types';
 import { theme } from '../../utils/theme';
 import { SafeAreaView } from 'react-native-safe-area-context';
@@ -79,7 +79,7 @@ const styles = StyleSheet.create({
     },
     topSection: {
         position: 'absolute',
-        top: 90,
+        top: Platform.OS === 'ios' ? 90 : 50,
         width: '100%',
         paddingHorizontal: moderateScale(40),
         alignItems: 'center'
