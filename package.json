@@ -25,6 +25,7 @@
     "@react-native-picker/picker": "^2.2.1",
     "@react-navigation/native": "^6.0.6",
     "@react-navigation/stack": "^6.0.11",
+    "dayjs": "^1.10.7",
     "i18next": "^21.6.2",
     "react": "17.0.2",
     "react-hook-form": "^7.22.1",
