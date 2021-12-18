@@ -7,11 +7,11 @@
 #define TIMEOUT_SECONDS 600
 #define TEXT_TO_LOOK_FOR @"Welcome to React"
 
-@interface KeleyaOnboardingTests : XCTestCase
+@interface KeleyaPregnancyAppTests : XCTestCase
 
 @end
 
-@implementation KeleyaOnboardingTests
+@implementation KeleyaPregnancyAppTests
 
 - (BOOL)findSubviewInView:(UIView *)view matching:(BOOL(^)(UIView *view))test
 {

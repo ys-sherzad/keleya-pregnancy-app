@@ -7,14 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		00E356F31AD99517003FC87E /* KeleyaOnboardingTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* KeleyaOnboardingTests.m */; };
-		0D201E2FF77A9F020FB1F277 /* libPods-KeleyaOnboarding-KeleyaOnboardingTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D8BCD4D56D7BF0C8F0B2CFAA /* libPods-KeleyaOnboarding-KeleyaOnboardingTests.a */; };
+		00E356F31AD99517003FC87E /* KeleyaPregnancyAppTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* KeleyaPregnancyAppTests.m */; };
+		0D201E2FF77A9F020FB1F277 /* libPods-KeleyaPregnancyApp-KeleyaPregnancyAppTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D8BCD4D56D7BF0C8F0B2CFAA /* libPods-KeleyaPregnancyApp-KeleyaPregnancyAppTests.a */; };
 		13B07FBC1A68108700A75B9A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.m */; };
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
 		49754B5D39804B4DA9C8DB78 /* Raleway-ExtraLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 98C4C75EEC2B46D8B80EB1F5 /* Raleway-ExtraLight.ttf */; };
 		4E0A1075740D44878123D6F3 /* Raleway-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 35F1D70959EF4BE3BEF3FF6F /* Raleway-Thin.ttf */; };
-		6098DEC90788B9337503EE0B /* libPods-KeleyaOnboarding.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F6A4586F6E7168AECB62CD4 /* libPods-KeleyaOnboarding.a */; };
+		6098DEC90788B9337503EE0B /* libPods-KeleyaPregnancyApp.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F6A4586F6E7168AECB62CD4 /* libPods-KeleyaPregnancyApp.a */; };
 		65459F67808649938BD72E26 /* Raleway-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7F51088E25C5495A8A068CB2 /* Raleway-SemiBold.ttf */; };
 		7A971BCD0B31437299C64BFB /* Raleway-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9FF31A9CCCB94E0F9E5F2F8B /* Raleway-Medium.ttf */; };
 		7DE19B4B6E3540298682D270 /* Raleway-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FF765ECC51424286AF64E719 /* Raleway-Black.ttf */; };
@@ -31,36 +31,36 @@
 			containerPortal = 83CBB9F71A601CBA00E9B192 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 13B07F861A680F5B00A75B9A;
-			remoteInfo = KeleyaOnboarding;
+			remoteInfo = KeleyaPregnancyApp;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		00E356EE1AD99517003FC87E /* KeleyaOnboardingTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KeleyaOnboardingTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		00E356EE1AD99517003FC87E /* KeleyaPregnancyAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KeleyaPregnancyAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		00E356F11AD99517003FC87E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		00E356F21AD99517003FC87E /* KeleyaOnboardingTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KeleyaOnboardingTests.m; sourceTree = "<group>"; };
+		00E356F21AD99517003FC87E /* KeleyaPregnancyAppTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KeleyaPregnancyAppTests.m; sourceTree = "<group>"; };
 		049A27A058D34D7FB28B09CF /* Raleway-Bold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Raleway-Bold.ttf"; path = "../assets/fonts/Raleway-Bold.ttf"; sourceTree = "<group>"; };
-		13B07F961A680F5B00A75B9A /* KeleyaOnboarding.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KeleyaOnboarding.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		13B07FAF1A68108700A75B9A /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = KeleyaOnboarding/AppDelegate.h; sourceTree = "<group>"; };
-		13B07FB01A68108700A75B9A /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = KeleyaOnboarding/AppDelegate.m; sourceTree = "<group>"; };
-		13B07FB51A68108700A75B9A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = KeleyaOnboarding/Images.xcassets; sourceTree = "<group>"; };
-		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = KeleyaOnboarding/Info.plist; sourceTree = "<group>"; };
-		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = KeleyaOnboarding/main.m; sourceTree = "<group>"; };
+		13B07F961A680F5B00A75B9A /* KeleyaPregnancyApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KeleyaPregnancyApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		13B07FAF1A68108700A75B9A /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = KeleyaPregnancyApp/AppDelegate.h; sourceTree = "<group>"; };
+		13B07FB01A68108700A75B9A /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = KeleyaPregnancyApp/AppDelegate.m; sourceTree = "<group>"; };
+		13B07FB51A68108700A75B9A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = KeleyaPregnancyApp/Images.xcassets; sourceTree = "<group>"; };
+		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = KeleyaPregnancyApp/Info.plist; sourceTree = "<group>"; };
+		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = KeleyaPregnancyApp/main.m; sourceTree = "<group>"; };
 		35F1D70959EF4BE3BEF3FF6F /* Raleway-Thin.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Raleway-Thin.ttf"; path = "../assets/fonts/Raleway-Thin.ttf"; sourceTree = "<group>"; };
-		3B354E12B1A4AE08A998DE1F /* Pods-KeleyaOnboarding.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KeleyaOnboarding.debug.xcconfig"; path = "Target Support Files/Pods-KeleyaOnboarding/Pods-KeleyaOnboarding.debug.xcconfig"; sourceTree = "<group>"; };
-		5ECA2742D37E1A1DCDB72AE1 /* Pods-KeleyaOnboarding.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KeleyaOnboarding.release.xcconfig"; path = "Target Support Files/Pods-KeleyaOnboarding/Pods-KeleyaOnboarding.release.xcconfig"; sourceTree = "<group>"; };
+		3B354E12B1A4AE08A998DE1F /* Pods-KeleyaPregnancyApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KeleyaPregnancyApp.debug.xcconfig"; path = "Target Support Files/Pods-KeleyaPregnancyApp/Pods-KeleyaPregnancyApp.debug.xcconfig"; sourceTree = "<group>"; };
+		5ECA2742D37E1A1DCDB72AE1 /* Pods-KeleyaPregnancyApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KeleyaPregnancyApp.release.xcconfig"; path = "Target Support Files/Pods-KeleyaPregnancyApp/Pods-KeleyaPregnancyApp.release.xcconfig"; sourceTree = "<group>"; };
 		7F51088E25C5495A8A068CB2 /* Raleway-SemiBold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Raleway-SemiBold.ttf"; path = "../assets/fonts/Raleway-SemiBold.ttf"; sourceTree = "<group>"; };
-		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = KeleyaOnboarding/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		8F6A4586F6E7168AECB62CD4 /* libPods-KeleyaOnboarding.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-KeleyaOnboarding.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = KeleyaPregnancyApp/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		8F6A4586F6E7168AECB62CD4 /* libPods-KeleyaPregnancyApp.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-KeleyaPregnancyApp.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		98C4C75EEC2B46D8B80EB1F5 /* Raleway-ExtraLight.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Raleway-ExtraLight.ttf"; path = "../assets/fonts/Raleway-ExtraLight.ttf"; sourceTree = "<group>"; };
 		9FF31A9CCCB94E0F9E5F2F8B /* Raleway-Medium.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Raleway-Medium.ttf"; path = "../assets/fonts/Raleway-Medium.ttf"; sourceTree = "<group>"; };
 		C08DFD8166B34475898D7936 /* Raleway-Regular.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Raleway-Regular.ttf"; path = "../assets/fonts/Raleway-Regular.ttf"; sourceTree = "<group>"; };
 		C7D082B9B838498289ABE125 /* Raleway-Light.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Raleway-Light.ttf"; path = "../assets/fonts/Raleway-Light.ttf"; sourceTree = "<group>"; };
-		D8BCD4D56D7BF0C8F0B2CFAA /* libPods-KeleyaOnboarding-KeleyaOnboardingTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-KeleyaOnboarding-KeleyaOnboardingTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D8BCD4D56D7BF0C8F0B2CFAA /* libPods-KeleyaPregnancyApp-KeleyaPregnancyAppTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-KeleyaPregnancyApp-KeleyaPregnancyAppTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DE08F2B25A89499AB78E8FEB /* Raleway-ExtraBold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Raleway-ExtraBold.ttf"; path = "../assets/fonts/Raleway-ExtraBold.ttf"; sourceTree = "<group>"; };
-		EC7892750715B6749F284B77 /* Pods-KeleyaOnboarding-KeleyaOnboardingTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KeleyaOnboarding-KeleyaOnboardingTests.release.xcconfig"; path = "Target Support Files/Pods-KeleyaOnboarding-KeleyaOnboardingTests/Pods-KeleyaOnboarding-KeleyaOnboardingTests.release.xcconfig"; sourceTree = "<group>"; };
+		EC7892750715B6749F284B77 /* Pods-KeleyaPregnancyApp-KeleyaPregnancyAppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KeleyaPregnancyApp-KeleyaPregnancyAppTests.release.xcconfig"; path = "Target Support Files/Pods-KeleyaPregnancyApp-KeleyaPregnancyAppTests/Pods-KeleyaPregnancyApp-KeleyaPregnancyAppTests.release.xcconfig"; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
-		F3AA9936C0EBF052E0F9344A /* Pods-KeleyaOnboarding-KeleyaOnboardingTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KeleyaOnboarding-KeleyaOnboardingTests.debug.xcconfig"; path = "Target Support Files/Pods-KeleyaOnboarding-KeleyaOnboardingTests/Pods-KeleyaOnboarding-KeleyaOnboardingTests.debug.xcconfig"; sourceTree = "<group>"; };
+		F3AA9936C0EBF052E0F9344A /* Pods-KeleyaPregnancyApp-KeleyaPregnancyAppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KeleyaPregnancyApp-KeleyaPregnancyAppTests.debug.xcconfig"; path = "Target Support Files/Pods-KeleyaPregnancyApp-KeleyaPregnancyAppTests/Pods-KeleyaPregnancyApp-KeleyaPregnancyAppTests.debug.xcconfig"; sourceTree = "<group>"; };
 		FF765ECC51424286AF64E719 /* Raleway-Black.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Raleway-Black.ttf"; path = "../assets/fonts/Raleway-Black.ttf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -69,7 +69,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0D201E2FF77A9F020FB1F277 /* libPods-KeleyaOnboarding-KeleyaOnboardingTests.a in Frameworks */,
+				0D201E2FF77A9F020FB1F277 /* libPods-KeleyaPregnancyApp-KeleyaPregnancyAppTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -77,20 +77,20 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6098DEC90788B9337503EE0B /* libPods-KeleyaOnboarding.a in Frameworks */,
+				6098DEC90788B9337503EE0B /* libPods-KeleyaPregnancyApp.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		00E356EF1AD99517003FC87E /* KeleyaOnboardingTests */ = {
+		00E356EF1AD99517003FC87E /* KeleyaPregnancyAppTests */ = {
 			isa = PBXGroup;
 			children = (
-				00E356F21AD99517003FC87E /* KeleyaOnboardingTests.m */,
+				00E356F21AD99517003FC87E /* KeleyaPregnancyAppTests.m */,
 				00E356F01AD99517003FC87E /* Supporting Files */,
 			);
-			path = KeleyaOnboardingTests;
+			path = KeleyaPregnancyAppTests;
 			sourceTree = "<group>";
 		};
 		00E356F01AD99517003FC87E /* Supporting Files */ = {
@@ -101,7 +101,7 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		13B07FAE1A68108700A75B9A /* KeleyaOnboarding */ = {
+		13B07FAE1A68108700A75B9A /* KeleyaPregnancyApp */ = {
 			isa = PBXGroup;
 			children = (
 				13B07FAF1A68108700A75B9A /* AppDelegate.h */,
@@ -111,16 +111,16 @@
 				81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */,
 				13B07FB71A68108700A75B9A /* main.m */,
 			);
-			name = KeleyaOnboarding;
+			name = KeleyaPregnancyApp;
 			sourceTree = "<group>";
 		};
 		1834F919044306129D45FCBF /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				3B354E12B1A4AE08A998DE1F /* Pods-KeleyaOnboarding.debug.xcconfig */,
-				5ECA2742D37E1A1DCDB72AE1 /* Pods-KeleyaOnboarding.release.xcconfig */,
-				F3AA9936C0EBF052E0F9344A /* Pods-KeleyaOnboarding-KeleyaOnboardingTests.debug.xcconfig */,
-				EC7892750715B6749F284B77 /* Pods-KeleyaOnboarding-KeleyaOnboardingTests.release.xcconfig */,
+				3B354E12B1A4AE08A998DE1F /* Pods-KeleyaPregnancyApp.debug.xcconfig */,
+				5ECA2742D37E1A1DCDB72AE1 /* Pods-KeleyaPregnancyApp.release.xcconfig */,
+				F3AA9936C0EBF052E0F9344A /* Pods-KeleyaPregnancyApp-KeleyaPregnancyAppTests.debug.xcconfig */,
+				EC7892750715B6749F284B77 /* Pods-KeleyaPregnancyApp-KeleyaPregnancyAppTests.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -129,8 +129,8 @@
 			isa = PBXGroup;
 			children = (
 				ED297162215061F000B7C4FE /* JavaScriptCore.framework */,
-				8F6A4586F6E7168AECB62CD4 /* libPods-KeleyaOnboarding.a */,
-				D8BCD4D56D7BF0C8F0B2CFAA /* libPods-KeleyaOnboarding-KeleyaOnboardingTests.a */,
+				8F6A4586F6E7168AECB62CD4 /* libPods-KeleyaPregnancyApp.a */,
+				D8BCD4D56D7BF0C8F0B2CFAA /* libPods-KeleyaPregnancyApp-KeleyaPregnancyAppTests.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -145,9 +145,9 @@
 		83CBB9F61A601CBA00E9B192 = {
 			isa = PBXGroup;
 			children = (
-				13B07FAE1A68108700A75B9A /* KeleyaOnboarding */,
+				13B07FAE1A68108700A75B9A /* KeleyaPregnancyApp */,
 				832341AE1AAA6A7D00B99B32 /* Libraries */,
-				00E356EF1AD99517003FC87E /* KeleyaOnboardingTests */,
+				00E356EF1AD99517003FC87E /* KeleyaPregnancyAppTests */,
 				83CBBA001A601CBA00E9B192 /* Products */,
 				2D16E6871FA4F8E400B85C8A /* Frameworks */,
 				1834F919044306129D45FCBF /* Pods */,
@@ -161,8 +161,8 @@
 		83CBBA001A601CBA00E9B192 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				13B07F961A680F5B00A75B9A /* KeleyaOnboarding.app */,
-				00E356EE1AD99517003FC87E /* KeleyaOnboardingTests.xctest */,
+				13B07F961A680F5B00A75B9A /* KeleyaPregnancyApp.app */,
+				00E356EE1AD99517003FC87E /* KeleyaPregnancyAppTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -186,9 +186,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		00E356ED1AD99517003FC87E /* KeleyaOnboardingTests */ = {
+		00E356ED1AD99517003FC87E /* KeleyaPregnancyAppTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 00E357021AD99517003FC87E /* Build configuration list for PBXNativeTarget "KeleyaOnboardingTests" */;
+			buildConfigurationList = 00E357021AD99517003FC87E /* Build configuration list for PBXNativeTarget "KeleyaPregnancyAppTests" */;
 			buildPhases = (
 				DC5EF38FE6B3D2213BA7B1F9 /* [CP] Check Pods Manifest.lock */,
 				00E356EA1AD99517003FC87E /* Sources */,
@@ -202,14 +202,14 @@
 			dependencies = (
 				00E356F51AD99517003FC87E /* PBXTargetDependency */,
 			);
-			name = KeleyaOnboardingTests;
-			productName = KeleyaOnboardingTests;
-			productReference = 00E356EE1AD99517003FC87E /* KeleyaOnboardingTests.xctest */;
+			name = KeleyaPregnancyAppTests;
+			productName = KeleyaPregnancyAppTests;
+			productReference = 00E356EE1AD99517003FC87E /* KeleyaPregnancyAppTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		13B07F861A680F5B00A75B9A /* KeleyaOnboarding */ = {
+		13B07F861A680F5B00A75B9A /* KeleyaPregnancyApp */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "KeleyaOnboarding" */;
+			buildConfigurationList = 13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "KeleyaPregnancyApp" */;
 			buildPhases = (
 				07C05CA36E7ABFF86FA39786 /* [CP] Check Pods Manifest.lock */,
 				FD10A7F022414F080027D42C /* Start Packager */,
@@ -224,9 +224,9 @@
 			);
 			dependencies = (
 			);
-			name = KeleyaOnboarding;
-			productName = KeleyaOnboarding;
-			productReference = 13B07F961A680F5B00A75B9A /* KeleyaOnboarding.app */;
+			name = KeleyaPregnancyApp;
+			productName = KeleyaPregnancyApp;
+			productReference = 13B07F961A680F5B00A75B9A /* KeleyaPregnancyApp.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -246,7 +246,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 83CBB9FA1A601CBA00E9B192 /* Build configuration list for PBXProject "KeleyaOnboarding" */;
+			buildConfigurationList = 83CBB9FA1A601CBA00E9B192 /* Build configuration list for PBXProject "KeleyaPregnancyApp" */;
 			compatibilityVersion = "Xcode 12.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -259,8 +259,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				13B07F861A680F5B00A75B9A /* KeleyaOnboarding */,
-				00E356ED1AD99517003FC87E /* KeleyaOnboardingTests */,
+				13B07F861A680F5B00A75B9A /* KeleyaPregnancyApp */,
+				00E356ED1AD99517003FC87E /* KeleyaPregnancyAppTests */,
 			);
 		};
 /* End PBXProject section */
@@ -323,7 +323,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-KeleyaOnboarding-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-KeleyaPregnancyApp-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -336,15 +336,15 @@
 			files = (
 			);
 			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-KeleyaOnboarding/Pods-KeleyaOnboarding-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-KeleyaPregnancyApp/Pods-KeleyaPregnancyApp-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-KeleyaOnboarding/Pods-KeleyaOnboarding-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-KeleyaPregnancyApp/Pods-KeleyaPregnancyApp-frameworks-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-KeleyaOnboarding/Pods-KeleyaOnboarding-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-KeleyaPregnancyApp/Pods-KeleyaPregnancyApp-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		463741B61C51581CB4A51A17 /* [CP] Embed Pods Frameworks */ = {
@@ -353,15 +353,15 @@
 			files = (
 			);
 			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-KeleyaOnboarding-KeleyaOnboardingTests/Pods-KeleyaOnboarding-KeleyaOnboardingTests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-KeleyaPregnancyApp-KeleyaPregnancyAppTests/Pods-KeleyaPregnancyApp-KeleyaPregnancyAppTests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-KeleyaOnboarding-KeleyaOnboardingTests/Pods-KeleyaOnboarding-KeleyaOnboardingTests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-KeleyaPregnancyApp-KeleyaPregnancyAppTests/Pods-KeleyaPregnancyApp-KeleyaPregnancyAppTests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-KeleyaOnboarding-KeleyaOnboardingTests/Pods-KeleyaOnboarding-KeleyaOnboardingTests-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-KeleyaPregnancyApp-KeleyaPregnancyAppTests/Pods-KeleyaPregnancyApp-KeleyaPregnancyAppTests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		C044F6D7788F0B4A2827C4D2 /* [CP] Copy Pods Resources */ = {
@@ -370,15 +370,15 @@
 			files = (
 			);
 			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-KeleyaOnboarding-KeleyaOnboardingTests/Pods-KeleyaOnboarding-KeleyaOnboardingTests-resources-${CONFIGURATION}-input-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-KeleyaPregnancyApp-KeleyaPregnancyAppTests/Pods-KeleyaPregnancyApp-KeleyaPregnancyAppTests-resources-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-KeleyaOnboarding-KeleyaOnboardingTests/Pods-KeleyaOnboarding-KeleyaOnboardingTests-resources-${CONFIGURATION}-output-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-KeleyaPregnancyApp-KeleyaPregnancyAppTests/Pods-KeleyaPregnancyApp-KeleyaPregnancyAppTests-resources-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-KeleyaOnboarding-KeleyaOnboardingTests/Pods-KeleyaOnboarding-KeleyaOnboardingTests-resources.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-KeleyaPregnancyApp-KeleyaPregnancyAppTests/Pods-KeleyaPregnancyApp-KeleyaPregnancyAppTests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		DC5EF38FE6B3D2213BA7B1F9 /* [CP] Check Pods Manifest.lock */ = {
@@ -396,7 +396,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-KeleyaOnboarding-KeleyaOnboardingTests-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-KeleyaPregnancyApp-KeleyaPregnancyAppTests-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -409,15 +409,15 @@
 			files = (
 			);
 			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-KeleyaOnboarding/Pods-KeleyaOnboarding-resources-${CONFIGURATION}-input-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-KeleyaPregnancyApp/Pods-KeleyaPregnancyApp-resources-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-KeleyaOnboarding/Pods-KeleyaOnboarding-resources-${CONFIGURATION}-output-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-KeleyaPregnancyApp/Pods-KeleyaPregnancyApp-resources-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-KeleyaOnboarding/Pods-KeleyaOnboarding-resources.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-KeleyaPregnancyApp/Pods-KeleyaPregnancyApp-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		FD10A7F022414F080027D42C /* Start Packager */ = {
@@ -446,7 +446,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				00E356F31AD99517003FC87E /* KeleyaOnboardingTests.m in Sources */,
+				00E356F31AD99517003FC87E /* KeleyaPregnancyAppTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -464,7 +464,7 @@
 /* Begin PBXTargetDependency section */
 		00E356F51AD99517003FC87E /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 13B07F861A680F5B00A75B9A /* KeleyaOnboarding */;
+			target = 13B07F861A680F5B00A75B9A /* KeleyaPregnancyApp */;
 			targetProxy = 00E356F41AD99517003FC87E /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -472,14 +472,14 @@
 /* Begin XCBuildConfiguration section */
 		00E356F61AD99517003FC87E /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = F3AA9936C0EBF052E0F9344A /* Pods-KeleyaOnboarding-KeleyaOnboardingTests.debug.xcconfig */;
+			baseConfigurationReference = F3AA9936C0EBF052E0F9344A /* Pods-KeleyaPregnancyApp-KeleyaPregnancyAppTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
 				);
-				INFOPLIST_FILE = KeleyaOnboardingTests/Info.plist;
+				INFOPLIST_FILE = KeleyaPregnancyAppTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -493,17 +493,17 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/KeleyaOnboarding.app/KeleyaOnboarding";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/KeleyaPregnancyApp.app/KeleyaPregnancyApp";
 			};
 			name = Debug;
 		};
 		00E356F71AD99517003FC87E /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = EC7892750715B6749F284B77 /* Pods-KeleyaOnboarding-KeleyaOnboardingTests.release.xcconfig */;
+			baseConfigurationReference = EC7892750715B6749F284B77 /* Pods-KeleyaPregnancyApp-KeleyaPregnancyAppTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				COPY_PHASE_STRIP = NO;
-				INFOPLIST_FILE = KeleyaOnboardingTests/Info.plist;
+				INFOPLIST_FILE = KeleyaPregnancyAppTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -517,20 +517,20 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/KeleyaOnboarding.app/KeleyaOnboarding";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/KeleyaPregnancyApp.app/KeleyaPregnancyApp";
 			};
 			name = Release;
 		};
 		13B07F941A680F5B00A75B9A /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 3B354E12B1A4AE08A998DE1F /* Pods-KeleyaOnboarding.debug.xcconfig */;
+			baseConfigurationReference = 3B354E12B1A4AE08A998DE1F /* Pods-KeleyaPregnancyApp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 6NACL7TVN9;
 				ENABLE_BITCODE = NO;
-				INFOPLIST_FILE = KeleyaOnboarding/Info.plist;
+				INFOPLIST_FILE = KeleyaPregnancyApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -541,7 +541,7 @@
 					"-lc++",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
-				PRODUCT_NAME = KeleyaOnboarding;
+				PRODUCT_NAME = KeleyaPregnancyApp;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -551,13 +551,13 @@
 		};
 		13B07F951A680F5B00A75B9A /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 5ECA2742D37E1A1DCDB72AE1 /* Pods-KeleyaOnboarding.release.xcconfig */;
+			baseConfigurationReference = 5ECA2742D37E1A1DCDB72AE1 /* Pods-KeleyaPregnancyApp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 6NACL7TVN9;
-				INFOPLIST_FILE = KeleyaOnboarding/Info.plist;
+				INFOPLIST_FILE = KeleyaPregnancyApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -568,7 +568,7 @@
 					"-lc++",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
-				PRODUCT_NAME = KeleyaOnboarding;
+				PRODUCT_NAME = KeleyaPregnancyApp;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
@@ -703,7 +703,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		00E357021AD99517003FC87E /* Build configuration list for PBXNativeTarget "KeleyaOnboardingTests" */ = {
+		00E357021AD99517003FC87E /* Build configuration list for PBXNativeTarget "KeleyaPregnancyAppTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				00E356F61AD99517003FC87E /* Debug */,
@@ -712,7 +712,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "KeleyaOnboarding" */ = {
+		13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "KeleyaPregnancyApp" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				13B07F941A680F5B00A75B9A /* Debug */,
@@ -721,7 +721,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		83CBB9FA1A601CBA00E9B192 /* Build configuration list for PBXProject "KeleyaOnboarding" */ = {
+		83CBB9FA1A601CBA00E9B192 /* Build configuration list for PBXProject "KeleyaPregnancyApp" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				83CBBA201A601CBA00E9B192 /* Debug */,

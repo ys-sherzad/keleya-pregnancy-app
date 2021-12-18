@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "13B07F861A680F5B00A75B9A"
-               BuildableName = "KeleyaOnboarding.app"
-               BlueprintName = "KeleyaOnboarding"
-               ReferencedContainer = "container:KeleyaOnboarding.xcodeproj">
+               BuildableName = "KeleyaPregnancyApp.app"
+               BlueprintName = "KeleyaPregnancyApp"
+               ReferencedContainer = "container:KeleyaPregnancyApp.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -33,9 +33,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "00E356ED1AD99517003FC87E"
-               BuildableName = "KeleyaOnboardingTests.xctest"
-               BlueprintName = "KeleyaOnboardingTests"
-               ReferencedContainer = "container:KeleyaOnboarding.xcodeproj">
+               BuildableName = "KeleyaPregnancyAppTests.xctest"
+               BlueprintName = "KeleyaPregnancyAppTests"
+               ReferencedContainer = "container:KeleyaPregnancyApp.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -55,9 +55,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "13B07F861A680F5B00A75B9A"
-            BuildableName = "KeleyaOnboarding.app"
-            BlueprintName = "KeleyaOnboarding"
-            ReferencedContainer = "container:KeleyaOnboarding.xcodeproj">
+            BuildableName = "KeleyaPregnancyApp.app"
+            BlueprintName = "KeleyaPregnancyApp"
+            ReferencedContainer = "container:KeleyaPregnancyApp.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </LaunchAction>
@@ -72,9 +72,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "13B07F861A680F5B00A75B9A"
-            BuildableName = "KeleyaOnboarding.app"
-            BlueprintName = "KeleyaOnboarding"
-            ReferencedContainer = "container:KeleyaOnboarding.xcodeproj">
+            BuildableName = "KeleyaPregnancyApp.app"
+            BlueprintName = "KeleyaPregnancyApp"
+            ReferencedContainer = "container:KeleyaPregnancyApp.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

@@ -1,6 +1,6 @@
-import android.os.Bundle;
+package com.keleya.app;
 
-package ysherzad.onboarding.keleya;
+import android.os.Bundle;
 
 import com.facebook.react.ReactActivity;
 
@@ -12,7 +12,7 @@ public class MainActivity extends ReactActivity {
    */
   @Override
   protected String getMainComponentName() {
-    return "KeleyaOnboarding";
+    return "KeleyaPregnancyApp";
   }
 
   @Override
