@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { View, StyleSheet, ScrollView, NativeSyntheticEvent, NativeScrollEvent } from 'react-native';
+import { View, StyleSheet, ScrollView, NativeSyntheticEvent, NativeScrollEvent, Platform } from 'react-native';
 import Button from '../../shared/Button';
 import { RouterStackParamList, Screen } from '../types';
 import { StackScreenProps } from '@react-navigation/stack';
@@ -95,7 +95,7 @@ export default InitialScreen;
 const styles = StyleSheet.create({
     bottomSectionContainer: {
         position: 'absolute',
-        bottom: 0,
+        bottom: Platform.OS === 'ios' ? 40 : 0,
         height: moderateScale(120),
         width: '84%',
         alignItems: 'center',
